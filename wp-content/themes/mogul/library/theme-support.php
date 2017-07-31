@@ -40,7 +40,8 @@ function theme_support() {
 
 	// Custom Header
 	add_theme_support( 'custom-header', array(
-			'height'        => '50',
+			'height'        => 'auto',
+			'width'        => 'auto',
 			'flex-height'    => true,
 			'uploads'       => true,
 			'header-text'   => false
@@ -56,18 +57,7 @@ function theme_support() {
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
-	/**
-	 * Add support for core custom logo.
-	 *
-	 * @link https://codex.wordpress.org/Theme_Logo
-	 */
-	add_theme_support( 'custom-logo', array(
-		'height'      => 250,
-		'width'       => 250,
-		'flex-width'  => true,
-		'flex-height' => true,
-	) );
-
+	
 	/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *

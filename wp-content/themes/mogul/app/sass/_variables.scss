@@ -1,0 +1,47 @@
+//---GLOBAL---
+$main: #343434;
+$dark-blue: #1f4252;
+$blue: #3580b1;
+$dusk-blue: #215976;
+$seafoam-blue: #6aacd5;
+$green: #00ffa2;
+$orange: #f1961c;
+$yellow: #ffd300;
+$red: #d72206;
+
+$main-font: 'Futura LT', Arial, sans-serif;
+$second-font: Arial, sans-serif;
+
+//---Mixins---
+@mixin has-nth($expression, $element: '*') {
+  &:nth-last-child(#{$expression}):first-child,
+  &:nth-last-child(#{$expression}):first-child ~ #{$element} {
+    @content;
+  }
+}
+
+@mixin at-least($quantity, $element: '*') {
+  @include has-nth('n + #{$quantity}', $element) {
+    @content;
+  }
+}
+
+/* Responsive font-size*/
+  @mixin font-size($minSize: 24, $maxSize: 48, $minWidth: 320, $maxWidth: 993, $baseSize: 14) {
+  font-size: #{$minSize}px;
+  @media screen and (min-width: #{$minWidth}px ) {
+    font-size: calc( #{($minSize / $baseSize)}rem + #{($maxSize - $minSize)} * (100vw - #{$minWidth}px ) / #{($maxWidth - $minWidth)} );
+  }
+  @media screen and (min-width: #{$maxWidth}px) {
+    font-size: calc(#{($minSize / $baseSize)}rem + #{($maxSize - $minSize)}px);
+  }
+}
+
+//---GALLERY---
+
+
+//---CONTACT---
+
+
+//---FOOTER---
+

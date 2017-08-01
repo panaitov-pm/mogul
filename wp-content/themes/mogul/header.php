@@ -26,7 +26,7 @@
 	<header id="masthead" class="site-header">
 		<div class="head-top">
 			<div class="head-top__btn">
-				<a href="#" class="book-appointment">
+				<a href="<?php echo get_permalink(77) ?> " class="book-appointment">
 					<img src="<?php the_field('your_appointment', 'options') ?> " alt="Your appointment">
 				</a>
 			</div>

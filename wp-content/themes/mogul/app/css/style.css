@@ -205,6 +205,11 @@ body.js-nav-menu-active {
   transform: translateX(-5%);
 }
 
+.site-main {
+  padding-top: 110px;
+  background-color: #FFF;
+}
+
 /* -----------------------------------------
  HEADER
 ----------------------------------------- */
@@ -231,6 +236,30 @@ body.js-nav-menu-active {
 .book-appointment {
   display: block;
   max-width: 171px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.book-appointment img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.book-appointment:hover,
+.book-appointment:focus {
+  -webkit-transform: rotateZ(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotateZ(30deg);
+}
+
+.book-appointment:active {
+  -webkit-transform: rotateZ(30deg) scale(0.8);
+  -ms-transform: rotate(30deg) scale(0.8);
+  transform: rotateZ(30deg) scale(0.8);
 }
 
 /* --------Hamburger*/
@@ -420,6 +449,10 @@ body.js-nav-menu-active {
 }
 
 /* -----------------------------------------
+ BOOK YOUR APPOINTMENT
+----------------------------------------- */
+
+/* -----------------------------------------
  INTRO
 ----------------------------------------- */
 
@@ -561,6 +594,119 @@ div.wpcf7 .ajax-loader {
 
 div.wpcf7-response-output {
   display: none !important;
+}
+
+/* -----------------------------------------
+ MAIN FORM
+----------------------------------------- */
+
+.main-form {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 120px;
+}
+
+.main-form__title {
+  color: #282828;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.main-form__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 156px;
+}
+
+.main-form__item:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+.main-form__item label {
+  width: 156px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 15px;
+  color: #4d4f50;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.main-form__item span {
+  display: block;
+  width: 56%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-form__item textarea {
+  display: inline-block;
+  min-height: 200px;
+}
+
+.main-form__field {
+  display: inline-block;
+  width: 100%;
+  background-color: #F4F5F4;
+  padding: 5px 15px;
+}
+
+.main-form__action {
+  position: absolute;
+  right: 0;
+  bottom: 194px;
+}
+
+.main-form__btn {
+  display: block;
+  width: 121px;
+  height: 121px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 50%;
+  background-color: #282828;
+  text-transform: uppercase;
+  color: #FFF;
+  -webkit-box-shadow: inset 0 0 0 3px #fff, 0 0 0 2px #282828;
+  box-shadow: inset 0 0 0 3px #fff, 0 0 0 2px #282828;
+  text-shadow: 1px 1px #282828;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-transition-property: color, -webkit-transform, -webkit-box-shadow;
+  transition-property: color, -webkit-transform, -webkit-box-shadow;
+  transition-property: color, transform, box-shadow;
+  transition-property: color, transform, box-shadow, -webkit-transform, -webkit-box-shadow;
+}
+
+.main-form__btn:hover,
+.main-form__btn:focus {
+  color: #282828;
+  -webkit-box-shadow: inset 0 0 0 75px #fff, 0 0 0 2px #282828;
+  box-shadow: inset 0 0 0 75px #fff, 0 0 0 2px #282828;
+}
+
+.main-form__btn:active {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 @media screen and (min-width: 993px) {

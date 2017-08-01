@@ -423,6 +423,194 @@ body.js-nav-menu-active {
  INTRO
 ----------------------------------------- */
 
+/* -----------------------------------------
+ FOOTER
+----------------------------------------- */
+
+.site-footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 30px 100px;
+  background-color: #282828;
+  color: #fff;
+  line-height: 1.56;
+  text-align: center;
+}
+
+.site-footer__col:nth-child(3) .foot__subtitle {
+  margin-bottom: 41px;
+}
+
+.foot__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 48px;
+  letter-spacing: 1.9px;
+}
+
+.foot__subtitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 56px;
+  letter-spacing: 0.6px;
+}
+
+.subscribe-form__item {
+  position: relative;
+}
+
+.subscribe-form__field {
+  width: 100%;
+  padding: 11px 16px;
+}
+
+.subscribe-form__btn {
+  display: none;
+}
+
+.foot-info__contacts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.foot-info__address,
+.foot-info__mail,
+.foot-info__tel {
+  position: relative;
+  top: 8px;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+
+.foot-info__address:before,
+.foot-info__mail:before,
+.foot-info__tel:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+}
+
+.foot-info__address:before {
+  background-image: url(../img/map-icon.png);
+}
+
+.foot-info__mail:before {
+  background-image: url(../img/email-icon-small.png);
+}
+
+.foot-info__tel:before {
+  background-image: url(../img/phone-icon.png);
+}
+
+.social ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.social ul li {
+  width: 64px;
+  height: 64px;
+  margin-left: 6px;
+  margin-right: 6px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  margin-bottom: 18px;
+}
+
+.social ul li:hover {
+  -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
+}
+
+div.wpcf7 .ajax-loader {
+  display: none;
+}
+
+div.wpcf7-response-output {
+  display: none !important;
+}
+
+@media screen and (min-width: 993px) {
+  .site-footer__col {
+    margin-bottom: 0;
+    padding: 30px 45px 0;
+  }
+
+  .site-footer__col:not(:last-child) {
+    border-right: 1px solid #fff;
+  }
+
+  .site-footer__col:nth-child(3n + 2) {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .foot__subtitle {
+    width: 64%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .site-footer {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .social ul li {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .site-footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .main-navigation {
     margin-left: 160px;
@@ -431,6 +619,23 @@ body.js-nav-menu-active {
   .main-navigation ul li {
     margin-left: 15px;
     margin-right: 15px;
+  }
+
+  .site-footer {
+    display: block;
+  }
+
+  .site-footer__col:not(:last-child) {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .foot__title {
+    margin-bottom: 15px;
+  }
+
+  .foot__subtitle {
+    margin-bottom: 30px;
   }
 }
 
@@ -493,5 +698,20 @@ body.js-nav-menu-active {
   .main-navigation ul li a:hover,
   .main-navigation ul li a.active {
     color: #000;
+  }
+
+  .site-footer {
+    padding-bottom: 0;
+  }
+
+  .social {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .social ul li {
+    width: 30px;
+    height: 30px;
   }
 }

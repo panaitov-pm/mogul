@@ -20,27 +20,27 @@ body {
 /* -----------------------------------------
  HEADER
 ----------------------------------------- */
-.head-top {
-  position: relative;
-  display: flex;
-  background-color: #FFF;
-  padding-top: 16px;
-  padding-bottom: 26px;
-  margin-left: 40px;
-  margin-right: 40px;
-  &__btn {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .head-top {
+    position: relative;
+    display: flex;
+    background-color: #FFF;
+    padding-top: 16px;
+    padding-bottom: 26px;
+    margin-left: 40px;
+    margin-right: 40px;
+    &__btn {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
-}
-.book-appointment {
-  display: block;
-  max-width: 171px;
-  @include max-width(sm) {
-    max-width: 80px;
+  .book-appointment {
+    display: block;
+    max-width: 171px;
+    @include max-width(sm) {
+      max-width: 80px;
+    }
   }
-}
 
 /* --------Hamburger*/
   .hamburger {
@@ -253,4 +253,163 @@ body {
 /* -----------------------------------------
  INTRO
 ----------------------------------------- */
+ 
+/* -----------------------------------------
+ FOOTER
+----------------------------------------- */
+  .site-footer {
+    display: flex;
+    justify-content: center;
+    padding: 30px 100px;
+    background-color: #282828;
+    color: #fff;
+    line-height: 1.56;
+    text-align: center;
+    @include max-width(1440px) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    @include max-width(lg) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @include max-width(md) {
+      display: block;
+    }
+    @include max-width(sm) {
+      padding-bottom: 0;
+    }
+    &__col {
+      &:nth-child(3) {
+        .foot__subtitle {
+          margin-bottom: 41px;
+        }
+      }
+      &:not(:last-child) {
+        @include max-width(md) {
+          margin-bottom: 30px;
+          border-bottom: 1px solid #fff;
+        }
+      }
+      @include min-width(md) {
+        margin-bottom: 0;
+        padding: 30px 45px 0;
+        &:not(:last-child) {
+          border-right: 1px solid #fff;
+        }
+        &:nth-child(3n + 2) {
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+  .foot {
+    &__title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 48px;
+      letter-spacing: 1.9px;
+      @include max-width(md) {
+        margin-bottom: 15px;
+      }
+    }
+    &__subtitle {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 56px;
+      letter-spacing: 0.6px;
+      @include min-width(1440px) {
+        width: 64%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include max-width(md) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .subscribe-form {
+    &__item {
+      position: relative;
+    }
+    &__field {
+      width: 100%;
+      padding: 11px 16px;
+    }
+    &__btn {
+      display: none;
+    }
+  }
+  .foot-info {
+    &__contacts {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    &__address,
+    &__mail,
+    &__tel {
+      position: relative;
+      top: 8px;
+      padding-left: 30px;
+      margin-bottom: 30px;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 23px;
+        height: 18px;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: contain;
+      }
+    }
+    &__address:before {
+      background-image: url(../img/map-icon.png);
+    }
+    &__mail:before {
+      background-image: url(../img/email-icon-small.png);
+    }
+    &__tel:before {
+      background-image: url(../img/phone-icon.png);
+    }
+  }
+  .social {
+    @include max-width(sm) {
+      top: 0;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      li {
+        width: 64px;
+        height: 64px;
+        margin-left: 6px;
+        margin-right: 6px;
+        transition: transform 0.3s ease;
+        margin-bottom: 18px;
+        @include max-width(1370px) {
+          width: 45px;
+          height: 45px;
+          margin-bottom: 15px;
+        }
+        @include max-width(400px) {
+          width: 30px;
+          height: 30px;
+        }
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+  div.wpcf7 .ajax-loader {
+    display: none;
+  }
+  div.wpcf7-response-output {
+    display: none !important;
+  }
+
  

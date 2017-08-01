@@ -9,13 +9,247 @@
 /* -----------------------------------------
  GLOBAL
 ----------------------------------------- */
-
+body {
+  transition: transform 0.45s;
+  &.js-nav-menu-active {
+    transform: translateX(-5%)
+  }
+}
 
 
 /* -----------------------------------------
  HEADER
 ----------------------------------------- */
- 
+.head-top {
+  position: relative;
+  display: flex;
+  background-color: #FFF;
+  padding-top: 16px;
+  padding-bottom: 26px;
+  margin-left: 40px;
+  margin-right: 40px;
+  &__btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.book-appointment {
+  display: block;
+  max-width: 171px;
+  @include max-width(sm) {
+    max-width: 80px;
+  }
+}
+
+/* --------Hamburger*/
+  .hamburger {
+    display: none;
+    position: relative;
+    top: 20px;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    margin: 0;
+    overflow: visible;
+    border: 0;
+    @include max-width(sm) {
+      display: block;
+    }
+  }
+  .menu-toggle {
+    margin-left: auto;
+    top: 0;
+  }
+  .menu-close {
+    left: 13px;
+  }
+  .hamburger:hover .hamburger-inner,
+  .hamburger:hover .hamburger-inner::before,
+  .hamburger:hover .hamburger-inner::after {
+      opacity: 1;
+  }
+
+  .hamburger-box {
+      width: 30px;
+      height: 4px;
+      display: inline-block;
+      position: relative;
+  }
+
+  .hamburger-inner {
+      display: block;
+      top: 50%;
+      margin-top: -2px;
+      opacity: 0.5;
+      transition: opacity 0.2s ease;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+      width: 30px;
+      height: 4px;
+      background-color: #878484;
+      border-radius: 4px;
+      position: absolute;
+      transition: 0.4s ease;
+      transition-property: transform opacity;
+  }
+
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+      content: "";
+      display: block;
+  }
+
+  .hamburger-inner::before {
+      top: -8px;
+  }
+
+  .hamburger-inner::after {
+      bottom: -8px;
+  }
+
+  .hamburger--spin .hamburger-inner {
+      -webkit-transition-duration: 0.22s;
+      transition-duration: 0.22s;
+      -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  .hamburger--spin .hamburger-inner::before {
+      -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+      transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+  }
+
+  .hamburger--spin .hamburger-inner::after {
+      -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  .js-nav-menu-active .hamburger--spin .hamburger-inner {
+      -webkit-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+      transform: rotate(225deg);
+      -webkit-transition-delay: 0.12s;
+      transition-delay: 0.12s;
+      -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .js-nav-menu-active .hamburger--spin .hamburger-inner::before {
+      top: 0;
+      opacity: 0;
+      -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+      transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+  }
+
+  .js-nav-menu-active .hamburger--spin .hamburger-inner::after {
+      bottom: 0;
+      -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      -webkit-transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+/* --------Navigation*/
+ .main-navigation {
+    margin-left: 197px;
+    @include max-width(md) {
+      margin-left: 160px;
+    }
+    @include max-width(sm) {
+      margin-left: 0;
+      position: fixed;
+      top: 0;
+      right: -250px;
+      bottom: 0;
+      width: 250px;
+      overflow-y: auto;
+      background-color: #FFF;
+      transition: all 0.3s ease;
+      .js-nav-menu-active & {
+        right: -5%;
+        box-shadow: -5px 0 5px -3px rgba(0, 0, 0, 0.5);
+      }
+    }
+    ul {
+     display: flex;
+     align-items: center;
+     @include max-width(sm) {
+       display: block;
+       padding-top: 40px;
+     }
+     li {
+        margin-left: 19px;
+        margin-right: 19px;
+        @include max-width(md) {
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+        @include max-width(sm) {
+          margin-left: 0;
+          margin-right: 0;
+          &:not(:last-child) {
+            border-bottom: 1px solid #878484;
+          }
+          &:not(:first-child) {
+            border-top: 1px solid #C3C0C0;
+          }
+       }
+       a {
+        display: block;
+        position: relative;
+        padding-bottom: 5px;
+        text-decoration: none;
+        font-family: $second-font;
+        color: #878484;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        transition: color 0.2s;
+        @include max-width(sm) {
+          padding-top: 5px;
+          padding-left: 13px;
+          padding-right: 13px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            transform: scale(0, 1);
+            transform-origin: 50% 50%;
+            transition: transform 0.4s ease;
+            background-color: #878484;
+            @include max-width(sm) {
+              content: none;
+            }
+          }
+          &:hover,
+          &.active {
+            @include max-width(sm) {
+              color: #000;
+            }
+            &:after {
+              transform: scale(1, 1);
+            }
+          }
+       }
+     }
+   }
+ }
+
+
 /* -----------------------------------------
  INTRO
 ----------------------------------------- */

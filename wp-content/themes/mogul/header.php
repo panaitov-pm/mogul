@@ -24,9 +24,32 @@
 <div id="page" class="site">
 
 	<header id="masthead" class="site-header">
-		<a href="#" class="book-appointment">
-			<img src="" alt="">
-		</a>
+		<div class="head-top">
+			<div class="head-top__btn">
+				<a href="#" class="book-appointment">
+					<img src="<?php the_field('your_appointment', 'options') ?> " alt="Your appointment">
+				</a>
+			</div>
+			<button class="menu-toggle hamburger hamburger--spin" type="button">
+          <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+          </span>
+      </button>
+			<nav id="site-navigation" class="main-navigation">
+			<button class="menu-close hamburger hamburger--spin" type="button">
+          <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+          </span>
+      </button>
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu_top',
+					'container'        => 'ul',
+				) );
+			?>
+		</nav><!-- #site-navigation -->
+		</div>
+		<!-- /.head-top -->
 		<div class="site-branding">
 			<?php
 			if ( is_front_page() ) : ?>
@@ -36,15 +59,6 @@
 			<?php
 			endif;?>
 		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

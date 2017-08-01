@@ -33,7 +33,7 @@ function show_template() {
 	    acf_add_options_page(array(
 	        'page_title'    => 'Theme General Settings',
 	        'menu_title'    => 'Theme supports',
-	        'menu_slug'     => 'theme-general-settings',
+	        'menu_slug'     => 'options',
 	        'capability'    => 'edit_posts',
 	        'redirect'      => false
 	    ));

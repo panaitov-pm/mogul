@@ -6,6 +6,13 @@
 @import 'placeholder';
 //@import 'slick';
 
+.show-template {
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+}
 /* -----------------------------------------
  GLOBAL
 ----------------------------------------- */
@@ -16,8 +23,11 @@ body {
   }
 }
 .site-main {
-  padding-top: 110px;
+  padding-top: 107px;
   background-color: #FFF;
+  @include max-width(sm) {
+    padding-top: 40px;
+  }
 }
 
 /* -----------------------------------------
@@ -27,8 +37,8 @@ body {
     position: relative;
     display: flex;
     background-color: #FFF;
-    padding-top: 16px;
-    padding-bottom: 26px;
+    padding-top: 23px;
+    padding-bottom: 18px;
     margin-left: 40px;
     margin-right: 40px;
     &__btn {
@@ -177,7 +187,7 @@ body {
 
 /* --------Navigation*/
  .main-navigation {
-    margin-left: 197px;
+    margin-left: 195px;
     @include max-width(md) {
       margin-left: 160px;
     }
@@ -191,6 +201,7 @@ body {
       overflow-y: auto;
       background-color: #FFF;
       transition: all 0.3s ease;
+      z-index: 999;
       .js-nav-menu-active & {
         right: -5%;
         box-shadow: -5px 0 5px -3px rgba(0, 0, 0, 0.5);
@@ -324,7 +335,7 @@ body {
   }
   .foot {
     &__title {
-      font-size: 24px;
+      @include font-size($minSize: 18, $maxSize: 22);
       font-weight: bold;
       margin-bottom: 48px;
       letter-spacing: 1.9px;
@@ -333,7 +344,7 @@ body {
       }
     }
     &__subtitle {
-      font-size: 16px;
+      @include font-size($minSize: 14, $maxSize: 14);
       font-weight: bold;
       margin-bottom: 56px;
       letter-spacing: 0.6px;
@@ -441,50 +452,90 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 120px;
+  @include max-width(sm) {
+    margin-bottom: 30px;
+  }
   &__title {
+    @include font-size($minSize: 24, $maxSize: 45);
     color: #282828;
-    font-size: 48px;
     font-weight: bold;
-    margin-bottom: 100px;
+    margin-bottom: 107px;
     text-align: center;
+    letter-spacing: 1.1px;
+    @include max-width(sm) {
+      margin-bottom: 30px;  
+    }
   }
   &__item {
     display: flex;
     padding-right: 156px;
     &:not(:last-of-type) {
-      margin-bottom: 30px;
+      margin-bottom: 45px;
+      @include max-width(sm) {
+        margin-bottom: 15px;
+      }
+    }
+    @include max-width(sm) {
+      padding-right: 15px;
+      padding-left: 15px;
+      display: block;
     }
     label {
+      @include font-size($minSize: 16, $maxSize: 22, $minWidth: 320, $maxWidth: 993);
       width: 156px;
       flex-shrink: 0;
       margin-right: 15px;
       color: #4d4f50;
-      font-size: 24px;
       font-weight: bold;
       line-height: 1.05;
       text-align: center;
+      transform: translateY(2px);
+      @include max-width(sm) {
+        display: inline-block;
+        text-align: left;
+        margin-bottom: 5px;
+        transform: translateY(0);
+        margin-right: 0;
+      }
     }
     span {
       display: block;
-      width: 56%;
+      width: 68%;
       margin-left: auto;
       margin-right: auto;
+      @include max-width(sm) {
+        width: 100%;
+      }
     }
     textarea {
       display: inline-block;
-      min-height: 200px;
+      min-height: 228px;
+    }
+    .your-message {
+      padding-bottom: 135px;
+      border-bottom: 1px solid #d4d8d8;
+      @include max-width(sm) {
+        padding-bottom: 30px;
+      }
     }
   }
   &__field {
     display: inline-block;
     width: 100%;
     background-color: #F4F5F4;
-    padding: 5px 15px;
+    padding: 8px 15px;
   }
   &__action {
     position: absolute;
     right: 0;
     bottom: 194px;
+    @include max-width(md) {
+      right: 30px;
+    }
+    @include max-width(sm) {
+      position: static;
+      margin-top: 30px;
+    }
   }
   &__btn {
     display: block;
@@ -499,9 +550,16 @@ body {
     text-transform: uppercase;
     color: #FFF;
     box-shadow: inset 0 0 0 3px #fff, 0 0 0 2px #282828;
-    text-shadow: 1px 1px #282828;
+    text-shadow: 0 0 1px #282828;
     transition: 0.3s ease;
     transition-property: color, transform, box-shadow;
+    @include max-width(sm) {
+      margin-left: auto;
+      margin-right: auto;
+      width: 80px;
+      height: 80px;
+      font-size: 14px;
+    }
     &:hover,
     &:focus {
       color: #282828;

@@ -15,12 +15,14 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="<?php bloginfo('description');?>">
+	<title><?php bloginfo('name'); ?> | <?php echo wp_get_document_title(); ?></title>
 
 	<?php wp_head(); ?>
 </head>
 
+<div class="show-template"><?php global $template;?></div>
 <body <?php body_class(); ?>>
-<?php global $template;?>
 <div id="page" class="site">
 
 	<header id="masthead" class="site-header">

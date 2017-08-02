@@ -28,14 +28,14 @@ $second-font: Arial, sans-serif;
 
 /* Responsive font-size*/
   @mixin font-size($minSize: 24, $maxSize: 48, $minWidth: 320, $maxWidth: 993, $baseSize: 14) {
-  font-size: #{$minSize}px;
-  @media screen and (min-width: #{$minWidth}px ) {
-    font-size: calc( #{($minSize / $baseSize)}rem + #{($maxSize - $minSize)} * (100vw - #{$minWidth}px ) / #{($maxWidth - $minWidth)} );
+    font-size: #{$minSize}px;
+    @media screen and (min-width: #{$minWidth}px ) {
+      font-size: calc( #{($minSize / $baseSize)}rem + #{($maxSize - $minSize)} * (100vw - #{$minWidth}px ) / #{($maxWidth - $minWidth)} );
+    }
+    @media screen and (min-width: #{$maxWidth}px) {
+      font-size: calc(#{($minSize / $baseSize)}rem + #{($maxSize - $minSize)}px);
+    }
   }
-  @media screen and (min-width: #{$maxWidth}px) {
-    font-size: calc(#{($minSize / $baseSize)}rem + #{($maxSize - $minSize)}px);
-  }
-}
 
 //---GALLERY---
 

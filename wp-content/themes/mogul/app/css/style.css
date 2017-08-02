@@ -188,6 +188,14 @@ textarea:focus {
   border-color: #1e87c8;
 }
 
+.show-template {
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+}
+
 /* -----------------------------------------
  GLOBAL
 ----------------------------------------- */
@@ -206,7 +214,7 @@ body.js-nav-menu-active {
 }
 
 .site-main {
-  padding-top: 110px;
+  padding-top: 107px;
   background-color: #FFF;
 }
 
@@ -221,8 +229,8 @@ body.js-nav-menu-active {
   display: -ms-flexbox;
   display: flex;
   background-color: #FFF;
-  padding-top: 16px;
-  padding-bottom: 26px;
+  padding-top: 23px;
+  padding-bottom: 18px;
   margin-left: 40px;
   margin-right: 40px;
 }
@@ -388,7 +396,7 @@ body.js-nav-menu-active {
 /* --------Navigation*/
 
 .main-navigation {
-  margin-left: 197px;
+  margin-left: 195px;
 }
 
 .main-navigation ul {
@@ -481,14 +489,14 @@ body.js-nav-menu-active {
 }
 
 .foot__title {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 48px;
   letter-spacing: 1.9px;
 }
 
 .foot__subtitle {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 56px;
   letter-spacing: 0.6px;
@@ -610,11 +618,12 @@ div.wpcf7-response-output {
 }
 
 .main-form__title {
+  font-size: 24px;
   color: #282828;
-  font-size: 48px;
   font-weight: bold;
-  margin-bottom: 100px;
+  margin-bottom: 107px;
   text-align: center;
+  letter-spacing: 1.1px;
 }
 
 .main-form__item {
@@ -626,39 +635,47 @@ div.wpcf7-response-output {
 }
 
 .main-form__item:not(:last-of-type) {
-  margin-bottom: 30px;
+  margin-bottom: 45px;
 }
 
 .main-form__item label {
+  font-size: 16px;
   width: 156px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-right: 15px;
   color: #4d4f50;
-  font-size: 24px;
   font-weight: bold;
   line-height: 1.05;
   text-align: center;
+  -webkit-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  transform: translateY(2px);
 }
 
 .main-form__item span {
   display: block;
-  width: 56%;
+  width: 68%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .main-form__item textarea {
   display: inline-block;
-  min-height: 200px;
+  min-height: 228px;
+}
+
+.main-form__item .your-message {
+  padding-bottom: 135px;
+  border-bottom: 1px solid #d4d8d8;
 }
 
 .main-form__field {
   display: inline-block;
   width: 100%;
   background-color: #F4F5F4;
-  padding: 5px 15px;
+  padding: 8px 15px;
 }
 
 .main-form__action {
@@ -687,7 +704,7 @@ div.wpcf7-response-output {
   color: #FFF;
   -webkit-box-shadow: inset 0 0 0 3px #fff, 0 0 0 2px #282828;
   box-shadow: inset 0 0 0 3px #fff, 0 0 0 2px #282828;
-  text-shadow: 1px 1px #282828;
+  text-shadow: 0 0 1px #282828;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   -webkit-transition-property: color, -webkit-transform, -webkit-box-shadow;
@@ -709,6 +726,28 @@ div.wpcf7-response-output {
   transform: scale(0.8);
 }
 
+@media screen and (min-width: 320px) {
+  .foot__title {
+    font-size: -webkit-calc( 1.28571rem + 4 * (100vw - 320px ) / 673);
+    font-size: calc( 1.28571rem + 4 * (100vw - 320px ) / 673);
+  }
+
+  .foot__subtitle {
+    font-size: -webkit-calc( 1rem + 0 * (100vw - 320px ) / 673);
+    font-size: calc( 1rem + 0 * (100vw - 320px ) / 673);
+  }
+
+  .main-form__title {
+    font-size: -webkit-calc( 1.71429rem + 21 * (100vw - 320px ) / 673);
+    font-size: calc( 1.71429rem + 21 * (100vw - 320px ) / 673);
+  }
+
+  .main-form__item label {
+    font-size: -webkit-calc( 1.14286rem + 6 * (100vw - 320px ) / 673);
+    font-size: calc( 1.14286rem + 6 * (100vw - 320px ) / 673);
+  }
+}
+
 @media screen and (min-width: 993px) {
   .site-footer__col {
     margin-bottom: 0;
@@ -724,6 +763,26 @@ div.wpcf7-response-output {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
+  }
+
+  .foot__title {
+    font-size: -webkit-calc(1.28571rem + 4px);
+    font-size: calc(1.28571rem + 4px);
+  }
+
+  .foot__subtitle {
+    font-size: -webkit-calc(1rem + 0px);
+    font-size: calc(1rem + 0px);
+  }
+
+  .main-form__title {
+    font-size: -webkit-calc(1.71429rem + 21px);
+    font-size: calc(1.71429rem + 21px);
+  }
+
+  .main-form__item label {
+    font-size: -webkit-calc(1.14286rem + 6px);
+    font-size: calc(1.14286rem + 6px);
   }
 }
 
@@ -783,9 +842,17 @@ div.wpcf7-response-output {
   .foot__subtitle {
     margin-bottom: 30px;
   }
+
+  .main-form__action {
+    right: 30px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .site-main {
+    padding-top: 40px;
+  }
+
   .book-appointment {
     max-width: 80px;
   }
@@ -805,6 +872,7 @@ div.wpcf7-response-output {
     background-color: #FFF;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    z-index: 999;
   }
 
   .js-nav-menu-active .main-navigation {
@@ -852,6 +920,55 @@ div.wpcf7-response-output {
 
   .social {
     top: 0;
+  }
+
+  .main-form {
+    margin-bottom: 30px;
+  }
+
+  .main-form__title {
+    margin-bottom: 30px;
+  }
+
+  .main-form__item:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+
+  .main-form__item {
+    padding-right: 15px;
+    padding-left: 15px;
+    display: block;
+  }
+
+  .main-form__item label {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 5px;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    margin-right: 0;
+  }
+
+  .main-form__item span {
+    width: 100%;
+  }
+
+  .main-form__item .your-message {
+    padding-bottom: 30px;
+  }
+
+  .main-form__action {
+    position: static;
+    margin-top: 30px;
+  }
+
+  .main-form__btn {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+    height: 80px;
+    font-size: 14px;
   }
 }
 

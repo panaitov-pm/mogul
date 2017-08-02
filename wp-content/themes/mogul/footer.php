@@ -32,8 +32,8 @@
 					<p class="foot__subtitle"><?php the_field('foot-info_subtitle') ?></p>
 					<div class="foot-info__contacts">
 						<a href="#" class="foot-info__address"><?php the_field('foot-info_address') ?></a>
-						<a href="mailto:<?php the_field('article_post_contact') ?>" class="foot-info__mail"><?php the_field('article_post_contact') ?></a>
-						<a href="tel:<?php the_field('foot-info_tel') ?>" class="foot-info__tel"><?php the_field('foot-info_tel') ?></a>
+            <a class="foot-info__mail" href="mailto:<?php the_field('author_email', 2) ?>"><?php the_field('author_email', 2)?></a>
+						<a href="tel:<?php the_field('foot-info_tel') ?>" class="foot-info__tel"><?php the_field('foot-info_tel')?></a>
 					</div>
 					<!-- /.foot-info__contacts -->
 

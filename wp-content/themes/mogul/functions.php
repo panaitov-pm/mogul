@@ -49,17 +49,6 @@ if ( ! function_exists( 'mogul_setup' ) ) :
  */
 function mogul_setup() {
 
-	//Delete title
-add_filter('document_title_parts', function( $parts ){
-	if( isset($parts['site']) ) unset($parts['site']);
-	return $parts;
-});
-
-// Delete description
-add_filter('document_title_parts', function($title){
-	if( isset($title['tagline']) ) unset( $title['tagline'] );
-	return $title;
-});
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -70,6 +59,7 @@ add_filter('document_title_parts', function($title){
 endif;
 add_action( 'after_setup_theme', 'mogul_setup' );
 
+	
 /**
  * Implement the Custom Header feature.
  */
@@ -89,6 +79,18 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+//Delete title
+add_filter('document_title_parts', function( $parts ){
+	if( isset($parts['title']) ) unset($parts['title']);
+	return $parts;
+});
+
+// Delete description
+add_filter('document_title_parts', function($title){
+	if( isset($title['tagline']) ) unset( $title['tagline'] );
+	return $title;
+});
 
 /**
  * Load Jetpack compatibility file.

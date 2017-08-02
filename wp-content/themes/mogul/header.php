@@ -16,8 +16,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="<?php bloginfo('description');?>">
-	<title><?php bloginfo('name'); ?> | <?php echo wp_get_document_title(); ?></title>
-
+	<title><?php bloginfo('name'); ?> | <?php $slug = get_post(); echo $slug -> post_title ?></title>
+	
 	<?php wp_head(); ?>
 </head>
 
@@ -28,7 +28,7 @@
 	<header id="masthead" class="site-header">
 		<div class="head-top">
 			<div class="head-top__btn">
-				<a href="<?php echo get_permalink(77) ?> " class="book-appointment">
+				<a href="<?php echo get_permalink(77) ?> " class="book-appointment" target="_blank">
 					<img src="<?php the_field('your_appointment', 'options') ?> " alt="Your appointment">
 				</a>
 			</div>

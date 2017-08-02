@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    font: 400 14px/1.3 'Futura LT', Arial, sans-serif;
+    font: 400 14px/1.38 'Futura LT', Arial, sans-serif;
     width: 100%;
     height: auto;
     color: $main;
@@ -24,6 +24,14 @@ body {
 h1, h2, h3,h4 ,h5, h6, p, ul, ol,input {
     margin: 0;
     padding: 0;
+}
+
+h2 {
+    @include font-size($minSize: 24, $maxSize: 45);
+    color: #282828;
+    font-weight: bold;
+    letter-spacing: 1.1px;
+    text-align: center;
 }
 
 img {

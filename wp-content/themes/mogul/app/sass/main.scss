@@ -30,6 +30,15 @@ body {
   }
 }
 
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 /* -----------------------------------------
  HEADER
 ----------------------------------------- */
@@ -277,9 +286,74 @@ body {
  }
 
 /* -----------------------------------------
- BOOK YOUR APPOINTMENT
+ MAIN INFO
 ----------------------------------------- */
- 
+  .main-info {
+    @include font-size($minSize: 14, $maxSize: 20);
+    padding-top: 15px;
+    padding-bottom: 64px;
+    text-align: center;
+    @include max-width(sm) {
+      padding-bottom: 30px;
+    }
+    h2 {
+      @include font-size($minSize: 24, $maxSize: 39);
+      margin-bottom: 61px;
+      letter-spacing: 0.2px;
+      @include max-width(sm) {
+        margin-bottom: 30px;
+        padding-top: 0;
+      }
+    }
+    p {
+      line-height: 1.59;
+      @include min-width(sm) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    &__img {
+      width: 100%;
+      max-width: 898px;
+      margin: 92px auto;
+      padding: 45px;
+      border: 1px solid #0a0a0a;
+      background-color: #fff;
+      @include max-width(sm) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 15px;
+      }
+      &--author {
+        width: 100%;
+        max-width: 466px;
+        margin: 90px auto 77px;
+        padding: 42px;
+       @include max-width(sm){
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 15px;
+      }
+      }
+    }  
+  }
+  .author-info {
+    @include font-size($minSize: 16, $maxSize: 24);
+    width: 100%;
+    max-width: 410px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.38;
+    text-align: center;
+    &__location {
+      @include min-width(sm) {
+        margin-bottom: 25px;
+      }
+    }
+    &__email {
+      display: block;
+    }
+  }
 /* -----------------------------------------
  INTRO
 ----------------------------------------- */
@@ -455,13 +529,9 @@ body {
   @include max-width(sm) {
     margin-bottom: 30px;
   }
-  &__title {
-    @include font-size($minSize: 24, $maxSize: 45);
-    color: #282828;
-    font-weight: bold;
+  h2 {
     margin-bottom: 107px;
     text-align: center;
-    letter-spacing: 1.1px;
     @include max-width(sm) {
       margin-bottom: 30px;  
     }
@@ -481,7 +551,7 @@ body {
       display: block;
     }
     label {
-      @include font-size($minSize: 16, $maxSize: 22, $minWidth: 320, $maxWidth: 993);
+      @include font-size($minSize: 16, $maxSize: 22);
       width: 156px;
       flex-shrink: 0;
       margin-right: 15px;
@@ -503,6 +573,7 @@ body {
       width: 68%;
       margin-left: auto;
       margin-right: auto;
+      text-align: center;
       @include max-width(sm) {
         width: 100%;
       }

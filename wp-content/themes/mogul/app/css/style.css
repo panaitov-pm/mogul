@@ -18,10 +18,10 @@ html {
 }
 
 body {
-  font: 400 14px/1.3 'Futura LT', Arial, sans-serif;
+  font: 400 14px/1.38 'Futura LT', Arial, sans-serif;
   width: 100%;
   height: auto;
-  color: #343434;
+  color: #4d4f50;
   background-color: #FFF;
 }
 
@@ -37,6 +37,14 @@ ol,
 input {
   margin: 0;
   padding: 0;
+}
+
+h2 {
+  font-size: 24px;
+  color: #282828;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  text-align: center;
 }
 
 img {
@@ -216,6 +224,15 @@ body.js-nav-menu-active {
 .site-main {
   padding-top: 107px;
   background-color: #FFF;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* -----------------------------------------
@@ -457,8 +474,55 @@ body.js-nav-menu-active {
 }
 
 /* -----------------------------------------
- BOOK YOUR APPOINTMENT
+ MAIN INFO
 ----------------------------------------- */
+
+.main-info {
+  font-size: 14px;
+  padding-top: 15px;
+  padding-bottom: 64px;
+  text-align: center;
+}
+
+.main-info h2 {
+  font-size: 24px;
+  margin-bottom: 61px;
+  letter-spacing: 0.2px;
+}
+
+.main-info p {
+  line-height: 1.59;
+}
+
+.main-info__img {
+  width: 100%;
+  max-width: 898px;
+  margin: 92px auto;
+  padding: 45px;
+  border: 1px solid #0a0a0a;
+  background-color: #fff;
+}
+
+.main-info__img--author {
+  width: 100%;
+  max-width: 466px;
+  margin: 90px auto 77px;
+  padding: 42px;
+}
+
+.author-info {
+  font-size: 16px;
+  width: 100%;
+  max-width: 410px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.38;
+  text-align: center;
+}
+
+.author-info__email {
+  display: block;
+}
 
 /* -----------------------------------------
  INTRO
@@ -617,13 +681,9 @@ div.wpcf7-response-output {
   margin-bottom: 120px;
 }
 
-.main-form__title {
-  font-size: 24px;
-  color: #282828;
-  font-weight: bold;
+.main-form h2 {
   margin-bottom: 107px;
   text-align: center;
-  letter-spacing: 1.1px;
 }
 
 .main-form__item {
@@ -659,6 +719,7 @@ div.wpcf7-response-output {
   width: 68%;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .main-form__item textarea {
@@ -727,6 +788,26 @@ div.wpcf7-response-output {
 }
 
 @media screen and (min-width: 320px) {
+  h2 {
+    font-size: -webkit-calc( 1.71429rem + 21 * (100vw - 320px ) / 673);
+    font-size: calc( 1.71429rem + 21 * (100vw - 320px ) / 673);
+  }
+
+  .main-info {
+    font-size: -webkit-calc( 1rem + 6 * (100vw - 320px ) / 673);
+    font-size: calc( 1rem + 6 * (100vw - 320px ) / 673);
+  }
+
+  .main-info h2 {
+    font-size: -webkit-calc( 1.71429rem + 15 * (100vw - 320px ) / 673);
+    font-size: calc( 1.71429rem + 15 * (100vw - 320px ) / 673);
+  }
+
+  .author-info {
+    font-size: -webkit-calc( 1.14286rem + 8 * (100vw - 320px ) / 673);
+    font-size: calc( 1.14286rem + 8 * (100vw - 320px ) / 673);
+  }
+
   .foot__title {
     font-size: -webkit-calc( 1.28571rem + 4 * (100vw - 320px ) / 673);
     font-size: calc( 1.28571rem + 4 * (100vw - 320px ) / 673);
@@ -737,18 +818,44 @@ div.wpcf7-response-output {
     font-size: calc( 1rem + 0 * (100vw - 320px ) / 673);
   }
 
-  .main-form__title {
-    font-size: -webkit-calc( 1.71429rem + 21 * (100vw - 320px ) / 673);
-    font-size: calc( 1.71429rem + 21 * (100vw - 320px ) / 673);
-  }
-
   .main-form__item label {
     font-size: -webkit-calc( 1.14286rem + 6 * (100vw - 320px ) / 673);
     font-size: calc( 1.14286rem + 6 * (100vw - 320px ) / 673);
   }
 }
 
+@media screen and (min-width: 769px) {
+  .main-info p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .author-info__location {
+    margin-bottom: 25px;
+  }
+}
+
 @media screen and (min-width: 993px) {
+  h2 {
+    font-size: -webkit-calc(1.71429rem + 21px);
+    font-size: calc(1.71429rem + 21px);
+  }
+
+  .main-info {
+    font-size: -webkit-calc(1rem + 6px);
+    font-size: calc(1rem + 6px);
+  }
+
+  .main-info h2 {
+    font-size: -webkit-calc(1.71429rem + 15px);
+    font-size: calc(1.71429rem + 15px);
+  }
+
+  .author-info {
+    font-size: -webkit-calc(1.14286rem + 8px);
+    font-size: calc(1.14286rem + 8px);
+  }
+
   .site-footer__col {
     margin-bottom: 0;
     padding: 30px 45px 0;
@@ -773,11 +880,6 @@ div.wpcf7-response-output {
   .foot__subtitle {
     font-size: -webkit-calc(1rem + 0px);
     font-size: calc(1rem + 0px);
-  }
-
-  .main-form__title {
-    font-size: -webkit-calc(1.71429rem + 21px);
-    font-size: calc(1.71429rem + 21px);
   }
 
   .main-form__item label {
@@ -914,6 +1016,27 @@ div.wpcf7-response-output {
     color: #000;
   }
 
+  .main-info {
+    padding-bottom: 30px;
+  }
+
+  .main-info h2 {
+    margin-bottom: 30px;
+    padding-top: 0;
+  }
+
+  .main-info__img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 15px;
+  }
+
+  .main-info__img--author {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 15px;
+  }
+
   .site-footer {
     padding-bottom: 0;
   }
@@ -926,7 +1049,7 @@ div.wpcf7-response-output {
     margin-bottom: 30px;
   }
 
-  .main-form__title {
+  .main-form h2 {
     margin-bottom: 30px;
   }
 

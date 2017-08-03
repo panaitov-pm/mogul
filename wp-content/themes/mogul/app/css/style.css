@@ -525,8 +525,13 @@ body.js-nav-menu-active {
 }
 
 /* -----------------------------------------
- INTRO
+ APPOINTMENT-FORM
 ----------------------------------------- */
+
+.appointment-form h2 {
+  margin-bottom: 107px;
+  text-align: center;
+}
 
 /* -----------------------------------------
  FOOTER
@@ -679,11 +684,6 @@ div.wpcf7-response-output {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 120px;
-}
-
-.main-form h2 {
-  margin-bottom: 107px;
-  text-align: center;
 }
 
 .main-form__item {
@@ -1037,6 +1037,10 @@ div.wpcf7-response-output {
     padding: 15px;
   }
 
+  .appointment-form h2 {
+    margin-bottom: 30px;
+  }
+
   .site-footer {
     padding-bottom: 0;
   }
@@ -1046,10 +1050,6 @@ div.wpcf7-response-output {
   }
 
   .main-form {
-    margin-bottom: 30px;
-  }
-
-  .main-form h2 {
     margin-bottom: 30px;
   }
 

@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying the Book Appointment
- * Template name: Book Appointment
+ * Template name: Leave a Review
  *
  * Contains the closing of the #content div and all content after.
  *

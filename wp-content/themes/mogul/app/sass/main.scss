@@ -355,8 +355,17 @@ body {
     }
   }
 /* -----------------------------------------
- INTRO
+ APPOINTMENT-FORM
 ----------------------------------------- */
+  .appointment-form {
+    h2 {
+      margin-bottom: 107px;
+      text-align: center;
+      @include max-width(sm) {
+        margin-bottom: 30px;  
+      }
+    }
+  } 
  
 /* -----------------------------------------
  FOOTER
@@ -528,13 +537,6 @@ body {
   margin-bottom: 120px;
   @include max-width(sm) {
     margin-bottom: 30px;
-  }
-  h2 {
-    margin-bottom: 107px;
-    text-align: center;
-    @include max-width(sm) {
-      margin-bottom: 30px;  
-    }
   }
   &__item {
     display: flex;

@@ -27,6 +27,7 @@ body {
 
 h1,
 h2,
+.modal .main-form__title,
 h3,
 h4,
 h5,
@@ -39,7 +40,8 @@ input {
   padding: 0;
 }
 
-h2 {
+h2,
+.modal .main-form__title {
   font-size: 24px;
   color: #282828;
   font-weight: bold;
@@ -221,6 +223,10 @@ body.js-nav-menu-active {
   transform: translateX(-5%);
 }
 
+body.js-modal-open {
+  overflow: hidden;
+}
+
 .site-main {
   padding-top: 107px;
   background-color: #FFF;
@@ -258,7 +264,12 @@ body.js-nav-menu-active {
   left: 0;
 }
 
-.book-appointment {
+/* --------book your appointment link*/
+
+/* --------leave a review link*/
+
+.book-appointment,
+.leave-review {
   display: block;
   max-width: 171px;
   -webkit-transition: -webkit-transform 0.3s ease;
@@ -267,7 +278,8 @@ body.js-nav-menu-active {
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
-.book-appointment img {
+.book-appointment img,
+.leave-review img {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -275,13 +287,16 @@ body.js-nav-menu-active {
 }
 
 .book-appointment:hover,
-.book-appointment:focus {
+.book-appointment:focus,
+.leave-review:hover,
+.leave-review:focus {
   -webkit-transform: rotateZ(30deg);
   -ms-transform: rotate(30deg);
   transform: rotateZ(30deg);
 }
 
-.book-appointment:active {
+.book-appointment:active,
+.leave-review:active {
   -webkit-transform: rotateZ(30deg) scale(0.8);
   -ms-transform: rotate(30deg) scale(0.8);
   transform: rotateZ(30deg) scale(0.8);
@@ -484,7 +499,9 @@ body.js-nav-menu-active {
   text-align: center;
 }
 
-.main-info h2 {
+.main-info h2,
+.main-info .modal .main-form__title,
+.modal .main-info .main-form__title {
   font-size: 24px;
   margin-bottom: 61px;
   letter-spacing: 0.2px;
@@ -525,12 +542,55 @@ body.js-nav-menu-active {
 }
 
 /* -----------------------------------------
- APPOINTMENT-FORM
+ BOOK YOUR APPOINTMENT
 ----------------------------------------- */
 
-.appointment-form h2 {
+.appointment-form h2,
+.appointment-form .modal .main-form__title,
+.modal .appointment-form .main-form__title {
   margin-bottom: 107px;
   text-align: center;
+}
+
+/* -----------------------------------------
+ CONTACT
+----------------------------------------- */
+
+.contact-form {
+  position: relative;
+  width: 100%;
+  max-width: 1571px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.contact-form__btn {
+  position: absolute;
+}
+
+.contact-form__btn--appointment {
+  top: -17px;
+  right: 182px;
+  width: 100%;
+  max-width: 182px;
+}
+
+.contact-form__btn--appointment .book-appointment {
+  width: 100%;
+  max-width: none;
+}
+
+.contact-form__btn--leave {
+  top: 196px;
+  right: 15px;
+  max-width: 178px;
+}
+
+.contact-form__btn--leave .leave-review {
+  width: 100%;
+  max-width: none;
 }
 
 /* -----------------------------------------
@@ -787,8 +847,107 @@ div.wpcf7-response-output {
   transform: scale(0.8);
 }
 
+/*-----Modal form*/
+
+.modal-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: -webkit-calc(100% + 17px);
+  width: calc(100% + 17px);
+  height: 1px;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  z-index: 999;
+  background-color: rgba(50, 50, 50, 0);
+  visibility: hidden;
+  -webkit-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+  -webkit-transition-property: background-color, visibility;
+  transition-property: background-color, visibility;
+  overflow-x: hidden;
+}
+
+.modal-wrap.js-modal-open {
+  overflow-y: auto;
+  visibility: visible;
+  background-color: rgba(50, 50, 50, 0.3);
+}
+
+.modal {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+  background-color: #FFF;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  -webkit-transition-property: opacity, visibility, -webkit-transform;
+  transition-property: opacity, visibility, -webkit-transform;
+  transition-property: opacity, transform, visibility;
+  transition-property: opacity, transform, visibility, -webkit-transform;
+}
+
+.js-modal-open .modal {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.modal__close {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  line-height: 28px;
+  text-align: center;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.modal__close:hover {
+  -webkit-transform: rotateZ(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotateZ(360deg);
+}
+
+.modal__close:hover svg {
+  fill: red;
+}
+
+.modal__close svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  fill: #939393;
+}
+
 @media screen and (min-width: 320px) {
-  h2 {
+  h2,
+  .modal .main-form__title {
     font-size: -webkit-calc( 1.71429rem + 21 * (100vw - 320px ) / 673);
     font-size: calc( 1.71429rem + 21 * (100vw - 320px ) / 673);
   }
@@ -798,7 +957,9 @@ div.wpcf7-response-output {
     font-size: calc( 1rem + 6 * (100vw - 320px ) / 673);
   }
 
-  .main-info h2 {
+  .main-info h2,
+  .main-info .modal .main-form__title,
+  .modal .main-info .main-form__title {
     font-size: -webkit-calc( 1.71429rem + 15 * (100vw - 320px ) / 673);
     font-size: calc( 1.71429rem + 15 * (100vw - 320px ) / 673);
   }
@@ -836,7 +997,8 @@ div.wpcf7-response-output {
 }
 
 @media screen and (min-width: 993px) {
-  h2 {
+  h2,
+  .modal .main-form__title {
     font-size: -webkit-calc(1.71429rem + 21px);
     font-size: calc(1.71429rem + 21px);
   }
@@ -846,7 +1008,9 @@ div.wpcf7-response-output {
     font-size: calc(1rem + 6px);
   }
 
-  .main-info h2 {
+  .main-info h2,
+  .main-info .modal .main-form__title,
+  .modal .main-info .main-form__title {
     font-size: -webkit-calc(1.71429rem + 15px);
     font-size: calc(1.71429rem + 15px);
   }
@@ -911,6 +1075,23 @@ div.wpcf7-response-output {
   }
 }
 
+@media screen and (max-width: 1340px) {
+  .contact-form__btn--appointment {
+    right: 15px;
+  }
+
+  .contact-form__btn--appointment,
+  .contact-form__btn--leave {
+    right: 30px;
+    width: 121px;
+    height: 121px;
+  }
+
+  .contact-form .main-form__action {
+    bottom: 14px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .site-footer {
     padding-left: 15px;
@@ -948,6 +1129,17 @@ div.wpcf7-response-output {
   .main-form__action {
     right: 30px;
   }
+
+  .modal-wrap {
+    width: 100%;
+  }
+
+  .modal {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -955,7 +1147,8 @@ div.wpcf7-response-output {
     padding-top: 40px;
   }
 
-  .book-appointment {
+  .book-appointment,
+  .leave-review {
     max-width: 80px;
   }
 
@@ -1020,7 +1213,9 @@ div.wpcf7-response-output {
     padding-bottom: 30px;
   }
 
-  .main-info h2 {
+  .main-info h2,
+  .main-info .modal .main-form__title,
+  .modal .main-info .main-form__title {
     margin-bottom: 30px;
     padding-top: 0;
   }
@@ -1037,8 +1232,23 @@ div.wpcf7-response-output {
     padding: 15px;
   }
 
-  .appointment-form h2 {
+  .appointment-form h2,
+  .appointment-form .modal .main-form__title,
+  .modal .appointment-form .main-form__title {
     margin-bottom: 30px;
+  }
+
+  .contact-form__btn--appointment {
+    right: auto;
+    left: 15px;
+  }
+
+  .contact-form__btn--appointment,
+  .contact-form__btn--leave {
+    top: auto;
+    bottom: 0;
+    width: 80px;
+    height: 80px;
   }
 
   .site-footer {

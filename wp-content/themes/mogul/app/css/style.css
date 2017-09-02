@@ -847,6 +847,121 @@ div.wpcf7-response-output {
   transform: scale(0.8);
 }
 
+/* -----------------------------------------
+ BLOG
+----------------------------------------- */
+
+.blog-wrap {
+  width: 100%;
+  max-width: 1725px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.blog-posts {
+  height: 100vh;
+  overflow-y: auto;
+  font-weight: bold;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.blog-post,
+.post {
+  font-size: 12px;
+  line-height: 1.59;
+}
+
+.blog-post:not(:last-of-type),
+.post:not(:last-of-type) {
+  margin-bottom: 88px;
+}
+
+.blog-post__title,
+.blog-post .entry-title,
+.post__title,
+.post .entry-title {
+  position: relative;
+  color: #000;
+  font-size: 24px;
+  padding-bottom: 33px;
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.blog-post__title:after,
+.blog-post .entry-title:after,
+.post__title:after,
+.post .entry-title:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 10px;
+  right: 10px;
+  height: 1px;
+  background-color: rgba(77, 79, 80, 0.5);
+}
+
+.blog-post__desc,
+.post__desc {
+  text-align: justify;
+}
+
+.blog-post p:not(:last-of-type),
+.post p:not(:last-of-type) {
+  margin-bottom: 35px;
+}
+
+.post {
+  margin-bottom: 88px;
+}
+
+.widget-area {
+  padding-top: 95px;
+}
+
+.widget {
+  text-transform: uppercase;
+  margin-bottom: 51px;
+}
+
+.widget ul {
+  list-style-position: inside;
+}
+
+.widget ul li {
+  position: relative;
+  padding-left: 25px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.widget ul li:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.widget ul li:before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.widget-title {
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 13px 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
 /*-----Modal form*/
 
 .modal-wrap {
@@ -983,6 +1098,30 @@ div.wpcf7-response-output {
     font-size: -webkit-calc( 1.14286rem + 6 * (100vw - 320px ) / 673);
     font-size: calc( 1.14286rem + 6 * (100vw - 320px ) / 673);
   }
+
+  .blog-post,
+  .post {
+    font-size: -webkit-calc( 0.85714rem + 8 * (100vw - 320px ) / 673);
+    font-size: calc( 0.85714rem + 8 * (100vw - 320px ) / 673);
+  }
+
+  .blog-post__title,
+  .blog-post .entry-title,
+  .post__title,
+  .post .entry-title {
+    font-size: -webkit-calc( 1.71429rem + 13 * (100vw - 320px ) / 673);
+    font-size: calc( 1.71429rem + 13 * (100vw - 320px ) / 673);
+  }
+
+  .widget ul li {
+    font-size: -webkit-calc( 1rem + 1 * (100vw - 320px ) / 673);
+    font-size: calc( 1rem + 1 * (100vw - 320px ) / 673);
+  }
+
+  .widget-title {
+    font-size: -webkit-calc( 1.28571rem + 4 * (100vw - 320px ) / 673);
+    font-size: calc( 1.28571rem + 4 * (100vw - 320px ) / 673);
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -1050,6 +1189,30 @@ div.wpcf7-response-output {
     font-size: -webkit-calc(1.14286rem + 6px);
     font-size: calc(1.14286rem + 6px);
   }
+
+  .blog-post,
+  .post {
+    font-size: -webkit-calc(0.85714rem + 8px);
+    font-size: calc(0.85714rem + 8px);
+  }
+
+  .blog-post__title,
+  .blog-post .entry-title,
+  .post__title,
+  .post .entry-title {
+    font-size: -webkit-calc(1.71429rem + 13px);
+    font-size: calc(1.71429rem + 13px);
+  }
+
+  .widget ul li {
+    font-size: -webkit-calc(1rem + 1px);
+    font-size: calc(1rem + 1px);
+  }
+
+  .widget-title {
+    font-size: -webkit-calc(1.28571rem + 4px);
+    font-size: calc(1.28571rem + 4px);
+  }
 }
 
 @media screen and (min-width: 1441px) {
@@ -1057,6 +1220,13 @@ div.wpcf7-response-output {
     width: 64%;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .widget-title {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 
@@ -1302,6 +1472,28 @@ div.wpcf7-response-output {
     width: 80px;
     height: 80px;
     font-size: 14px;
+  }
+
+  .blog-posts {
+    padding-left: 0;
+    padding-right: 5px;
+  }
+
+  .blog-post__title,
+  .blog-post .entry-title,
+  .post__title,
+  .post .entry-title {
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+
+  .blog-post p:not(:last-of-type),
+  .post p:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+
+  .widget-area {
+    padding-top: 30px;
   }
 }
 

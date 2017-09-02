@@ -1,0 +1,78 @@
+********************************************************************************
+DUPLICATOR-LITE PACKAGE-LOG: 2017-09-01 14:22:07
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.2.16
+WORDPRESS:	4.8
+PHP INFO:	5.6.29 | SAPI: apache2handler
+SERVER:		Apache 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 2048M (1536M default) 
+MEMORY STACK: 22.25MB 
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   PHP(query limit - 100)
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Not Supported 
+TABLES: total:15 | filtered:0 | create:15 
+FILTERED: [] 
+SQL CREATED: 20170901_mogul_b648811d66ad41cf8011170901142153_database.sql 
+SQL FILE SIZE: 724.74KB (742134) 
+SQL FILE TIME: 2017-09-01 14:22:07 
+SQL RUNTIME: 0.15 sec. 
+
+******************************************************************************** 
+ARCHIVE (ZIP): 
+******************************************************************************** 
+ARCHIVE DIR:  C:/OpenServer/domains/wp.loc/mogul 
+ARCHIVE FILE: 20170901_mogul_b648811d66ad41cf8011170901142153_archive.zip 
+FILTERS: *ON* 
+DIRS:
+	C:/OpenServer/domains/wp.loc/mogul/wp-content/themes/mogul/node_modules 
+FILES:
+	not set 
+EXTS:  not set 
+---------------------------------------- 
+COMPRESSING 
+SIZE:	62.89MB 
+STATS:	Dirs 588 | Files 5,693 
+SQL ADDED: 20170901_mogul_b648811d66ad41cf8011170901142153_database.sql 
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 6281
+    [filename] => C:\OpenServer\domains\wp.loc\mogul\wp-snapshots\tmp\20170901_mogul_b648811d66ad41cf8011170901142153_archive.zip
+    [comment] => 
+)
+ 
+COMPRESSION RESULT: '1' 
+COMPRESSED SIZE: 38.67MB 
+ARCHIVE RUNTIME: 31.82 sec. 
+MEMORY STACK: 24.25MB 
+
+******************************************************************************** 
+MAKE INSTALLER: 
+******************************************************************************** 
+Build Start 
+Build Finished 
+Preping for use 
+Template parsed with new data 
+Complete [C:/OpenServer/domains/wp.loc/mogul/wp-snapshots/tmp/20170901_mogul_b648811d66ad41cf8011170901142153_installer.php] 
+Added to archive 
+
+******************************************************************************** 
+INTEGRITY CHECKS: 
+******************************************************************************** 
+SQL File: 724.74KB 
+Installer File: 431.87KB 
+Archive File: 38.67MB  
+
+********************************************************************************
+RECORD ID:[1]
+TOTAL PROCESS RUNTIME: 32.97 sec.
+PEAK PHP MEMORY USED: 26.75MB
+DONE PROCESSING => 20170901_mogul 2017-09-01 14:22:40
+ 

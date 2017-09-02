@@ -16,31 +16,31 @@
 /* -----------------------------------------
  GLOBAL
 ----------------------------------------- */
-body {
-  transition: transform 0.45s;
-  &.js-nav-menu-active {
-    transform: translateX(-5%)
+  body {
+    transition: transform 0.45s;
+    &.js-nav-menu-active {
+      transform: translateX(-5%)
+    }
+    &.js-modal-open {
+      overflow: hidden;
+    }
   }
-  &.js-modal-open {
-    overflow: hidden;
+  .site-main {
+    padding-top: 107px;
+    background-color: #FFF;
+    @include max-width(sm) {
+      padding-top: 40px;
+    }
   }
-}
-.site-main {
-  padding-top: 107px;
-  background-color: #FFF;
-  @include max-width(sm) {
-    padding-top: 40px;
-  }
-}
 
-.container {
-  width: 100%;
-  max-width: 1000px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
+  .container {
+    width: 100%;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
 /* -----------------------------------------
  HEADER
@@ -360,6 +360,7 @@ body {
       display: block;
     }
   }
+
 /* -----------------------------------------
  BOOK YOUR APPOINTMENT
 ----------------------------------------- */
@@ -435,6 +436,7 @@ body {
       }
     }
   }
+
 /* -----------------------------------------
  FOOTER
 ----------------------------------------- */
@@ -711,6 +713,117 @@ body {
     }
   }
 }
+
+/* -----------------------------------------
+ BLOG
+----------------------------------------- */
+  .blog-wrap {
+    width: 100%;
+    max-width: 1725px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .blog-posts {
+    height: 100vh;
+    overflow-y: auto;
+    font-weight: bold;
+    padding-left: 48px;
+    padding-right: 48px; 
+    @include max-width(sm) {
+      padding-left: 0;
+      padding-right: 5px;
+    }
+  }
+  .blog-post,
+  .post {
+    @include font-size($minSize: 12, $maxSize: 20);
+    line-height: 1.59;
+    &:not(:last-of-type) {
+      margin-bottom: 88px;
+    }
+    &__title,
+    .entry-title {
+      position: relative;
+      color: #000;
+      @include font-size($minSize: 24, $maxSize: 37);
+      padding-bottom: 33px;
+      margin-bottom: 45px;
+      text-align: center;
+      @include max-width(sm) {
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 10px;
+        right: 10px;
+        height: 1px;
+        background-color: rgba($main, 0.5);
+      }
+    }
+    &__desc {
+      text-align: justify;
+    }
+    p {
+      &:not(:last-of-type) {
+        margin-bottom: 35px;
+        @include max-width(sm) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+  .post {
+    margin-bottom: 88px;
+  }
+  .widget-area {
+    padding-top: 95px;
+    @include max-width(sm) {
+      padding-top: 30px;
+    }
+  }
+  .widget {
+    text-transform: uppercase;
+    margin-bottom: 51px;
+    ul {
+      list-style-position: inside;
+      li {
+        position: relative;
+        padding-left: 25px;
+        @include font-size($minSize: 14, $maxSize: 15);
+        font-weight: 300;
+        &:not(:last-of-type) {
+          margin-bottom: 20px;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          top: 8px;
+          left: 12px;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: #000;
+        }
+      }
+    }
+  }
+  .widget-title {
+    margin-bottom: 40px;
+    @include font-size($minSize: 18, $maxSize: 22);
+    font-weight: bold;
+    padding: 13px 20px;
+    border-top: 1px solid rgba(#000, 0.15r);
+    border-bottom: 1px solid rgba(#000, 0.15r);
+    @include max-width(1500px) {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
 
 /*-----Modal form*/
   .modal-wrap {

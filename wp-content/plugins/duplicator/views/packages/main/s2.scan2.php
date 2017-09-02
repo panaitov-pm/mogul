@@ -39,7 +39,7 @@ PHP SETTINGS -->
 		_e('Timeouts may occur for larger packages when [max_execution_time] time in the php.ini is too low.  A value of 0 (recommended) indicates that PHP has no time limits. '
 			. 'An attempt is made to override this value if the server allows it.', 'duplicator');
 		echo '<br/><br/>';
-		_e('Note: Timeouts can also be set at the web server layer, so if the PHP max timeout passes and you still see a build interrupt messages, then your web server could be killing '
+		_e('Note: Timeouts can also be set at the web server layer, so if the PHP max timeout passes and you still see a build timeout messages, then your web server could be killing '
 			. 'the process.   If you are on a budget host and limited on processing time, consider using the database or file filters to shrink the size of your overall package.   '
 			. 'However use caution as excluding the wrong resources can cause your install to not work properly.', 'duplicator');
 		echo "&nbsp;<i><a href='http://www.php.net/manual/en/info.configuration.php#ini.max-execution-time' target='_blank'>[" . __('details', 'duplicator')  . "]</a></i>";
@@ -66,7 +66,8 @@ WP SETTINGS -->
 		<?php
 		//VERSION CHECK
 		echo '<span id="data-srv-wp-version"></span>&nbsp;<b>' . __('WordPress Version', 'duplicator') . ":</b>&nbsp; '{$wp_version}' <br/>";
-		printf(__('It is recommended to have a version of WordPress that is greater than %1$s', 'duplicator'), DUPLICATOR_SCAN_MIN_WP);
+		printf(__('It is recommended to have a version of WordPress that is greater than %1$s.  Older version of WordPress can lead to migration issues and are a security risk. '
+			. 'If possible please update your WordPress site to the latest version.', 'duplicator'), DUPLICATOR_SCAN_MIN_WP);
 
 		//CORE FILES
 		echo '<hr size="1" /><span id="data-srv-wp-core"></span>&nbsp;<b>' . __('Core Files', 'duplicator') . "</b> <br/>";

@@ -3,8 +3,6 @@
     PACKAGE OPTS*/
     form#dup-form-opts label {line-height:22px}
     form#dup-form-opts input[type=checkbox] {margin-top:3px}
-    form#dup-form-opts fieldset {border-radius:4px;  border-top:1px solid #dfdfdf;  line-height:20px}
-    form#dup-form-opts fieldset{padding:10px 15px 15px 15px; min-height:275px; margin:0 10px 10px 10px}
     form#dup-form-opts textarea, input[type="text"] {width:100%}
     form#dup-form-opts textarea#filter-dirs {height:95px;}
     form#dup-form-opts textarea#filter-exts {height:27px}
@@ -94,10 +92,10 @@ STORAGE -->
 							<img src="<?php echo DUPLICATOR_PLUGIN_URL ?>assets/img/google_drive_64px.png" /> 
 							<img src="<?php echo DUPLICATOR_PLUGIN_URL ?>assets/img/ftp-64.png" /> 
 							<?php echo sprintf(__('%1$s, %2$s, %3$s, %4$s and other storage options available in', 'duplicator'), 'Amazon', 'Dropbox', 'Google Drive', 'FTP'); ?>
-							<a href="https://snapcreek.com/duplicator/?utm_source=duplicator_free&utm_medium=wordpress_plugin&utm_content=free_storage&utm_campaign=duplicator_pro" target="_blank"><?php _e('Professional', 'duplicator');?></a> 
+							<a href="https://snapcreek.com/duplicator/?utm_source=duplicator_free&utm_medium=wordpress_plugin&utm_content=free_storage&utm_campaign=duplicator_pro" target="_blank"><?php _e('Duplicator Pro', 'duplicator');?></a> 
 							<i class="fa fa-lightbulb-o" 
 								data-tooltip-title="<?php _e("Additional Storage:", 'duplicator'); ?>" 
-								data-tooltip="<?php _e('Professional allows you to create a package and then store it at a custom location on this server or to a cloud '
+								data-tooltip="<?php _e('Duplicator Pro allows you to create a package and then store it at a custom location on this server or to a cloud '
 										. 'based location such as Google Drive, Amazon, Dropbox or FTP.', 'duplicator'); ?>">
 							 </i>
 						</span>
@@ -357,10 +355,10 @@ INSTALLER -->
 			<span class="dup-pro-text">
 				<img src="<?php echo DUPLICATOR_PLUGIN_URL ?>assets/img/cpanel-48.png" style="width:16px; height:12px" />
 				<?php _e("Create the database and users directly at install time with ", 'duplicator'); ?>
-				<a href="https://snapcreek.com/duplicator/?utm_source=duplicator_free&utm_medium=wordpress_plugin&utm_content=free_cpanel&utm_campaign=duplicator_pro" target="_blank"><?php _e('Professional', 'duplicator');?></a>
+				<a href="https://snapcreek.com/duplicator/?utm_source=duplicator_free&utm_medium=wordpress_plugin&utm_content=free_cpanel&utm_campaign=duplicator_pro" target="_blank"><?php _e('Duplicator Pro', 'duplicator');?></a>
 				<i class="fa fa-lightbulb-o"
 					data-tooltip-title="<?php _e("cPanel Access:", 'duplicator'); ?>" 
-					data-tooltip="<?php _e('If your server supports cPanel API access then you can create new databases and select existing ones with Duplicator Professional at install time.', 'duplicator'); ?>">
+					data-tooltip="<?php _e('If your server supports cPanel API access then you can create new databases and select existing ones with Duplicator Pro at install time.', 'duplicator'); ?>">
 				</i>
 			</span>
 		</div>
@@ -490,6 +488,11 @@ jQuery(document).ready(function ($)
 			$cb.closest("label").css('textDecoration', 'none');
 		}
 	}
+
+	<?php if ($retry_dbenabled) :?>
+		$('#dup-pack-archive-panel').show(500);
+		$('#export-onlydb').prop( "checked", true );
+	<?php endif; ?>
 	
 	//Init:Toggle OptionTabs
 	Duplicator.Pack.ToggleFileFilters();

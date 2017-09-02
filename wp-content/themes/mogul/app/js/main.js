@@ -34,20 +34,12 @@
             $(document).on('click', '.main-form__btn', function() {
                 $siteMain.find('.field-subject').val(subjectTitle);
             });
-    
     }); // end ready
 
 
     $(window).on('load resize ready', function() {
         //----------Delete class
             $body.removeClass('js-nav-menu-active');
-       
-
-       
-    });
-
-    $(window).on('scroll', function(event) {
-       
     });
 
     //---------Is visible page
@@ -64,10 +56,10 @@
         function openCloseModal() {
             if( !$body.hasClass('js-modal-open') ) {
                 $body.addClass('js-modal-open');
-                 $modalWrap.addClass('js-modal-open');
+                $modalWrap.addClass('js-modal-open');
             } else {
                 $body.removeClass('js-modal-open');
-                 $modalWrap.removeClass('js-modal-open');
+                $modalWrap.removeClass('js-modal-open');
             }
         }
 

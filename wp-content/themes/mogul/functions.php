@@ -189,7 +189,7 @@ function true_duplicate_post_as_draft(){
 		wp_redirect( admin_url( 'post.php?action=edit&post=' . $new_post_id ) );
 		exit;
 	} else {
-		wp_die('Ошибка создания поста, не могу найти оригинальный пост с ID=: ' . $post_id);
+		wp_die('Error creating post, can not find the original post with ID=: ' . $post_id);
 	}
 }
 add_action( 'admin_action_true_duplicate_post_as_draft', 'true_duplicate_post_as_draft' );
@@ -199,7 +199,7 @@ add_action( 'admin_action_true_duplicate_post_as_draft', 'true_duplicate_post_as
  */
 function true_duplicate_post_link( $actions, $post ) {
 	if (current_user_can('edit_posts')) {
-		$actions['duplicate'] = '<a href="admin.php?action=true_duplicate_post_as_draft&amp;post=' . $post->ID . '" title="Дублировать этот пост" rel="permalink">Дублировать</a>';
+		$actions['duplicate'] = '<a href="admin.php?action=true_duplicate_post_as_draft&amp;post=' . $post->ID . '" title="Dublicate the post" rel="permalink">Dublicate</a>';
 	}
 	return $actions;
 }

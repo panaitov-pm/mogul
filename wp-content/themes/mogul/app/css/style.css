@@ -962,6 +962,141 @@ div.wpcf7-response-output {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
+/* -----------------------------------------
+ PORTFOLIO
+----------------------------------------- */
+
+.portfolio__title {
+  font-size: 24px;
+  margin-bottom: 95px;
+  letter-spacing: 5px;
+}
+
+.portfolio__nav {
+  margin-bottom: 64px;
+}
+
+.portfolio__nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.portfolio__nav ul li {
+  font-size: 14px;
+  color: #282828;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+}
+
+.portfolio__nav ul li:not(:last-child) {
+  border-right: 1px solid #282828;
+}
+
+.portfolio__nav ul li a {
+  position: relative;
+  padding: 6px 50px;
+}
+
+.portfolio__nav ul li a:after {
+  content: '';
+  position: absolute;
+  top: -webkit-calc(100% - 6px);
+  top: calc(100% - 6px);
+  left: 0;
+  right: 0;
+  height: 1px;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+  background-color: #282828;
+}
+
+.portfolio__nav ul li a:hover:after {
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+.portfolio_content {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 184px;
+  padding-top: 45px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid rgba(40, 40, 40, 0.3);
+  border-top: 1px solid rgba(40, 40, 40, 0.3);
+}
+
+.portfolio_content__inner {
+  width: 100%;
+  max-width: 1506px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0;
+}
+
+.portfolio_content__item {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  width: -webkit-calc(20% - 20px);
+  width: calc(20% - 20px);
+}
+
+.portfolio_info {
+  text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio_info h2,
+.portfolio_info .modal .main-form__title,
+.modal .portfolio_info .main-form__title {
+  font-size: 24px;
+  margin-bottom: 60px;
+  font-family: "Futura LT";
+  font-weight: bold;
+  color: #000000;
+  letter-spacing: 1.1px;
+}
+
+.portfolio_info__desc {
+  font-size: 16px;
+  margin-bottom: 180px;
+  font-weight: bold;
+  line-height: 1.55;
+}
+
+.portfolio_info__desc p {
+  margin-bottom: 20px;
+}
+
 /*-----Modal form*/
 
 .modal-wrap {
@@ -1122,6 +1257,28 @@ div.wpcf7-response-output {
     font-size: -webkit-calc( 1.28571rem + 4 * (100vw - 320px ) / 673);
     font-size: calc( 1.28571rem + 4 * (100vw - 320px ) / 673);
   }
+
+  .portfolio__title {
+    font-size: -webkit-calc( 1.71429rem + 28 * (100vw - 320px ) / 673);
+    font-size: calc( 1.71429rem + 28 * (100vw - 320px ) / 673);
+  }
+
+  .portfolio__nav ul li {
+    font-size: -webkit-calc( 1rem + 8 * (100vw - 320px ) / 673);
+    font-size: calc( 1rem + 8 * (100vw - 320px ) / 673);
+  }
+
+  .portfolio_info h2,
+  .portfolio_info .modal .main-form__title,
+  .modal .portfolio_info .main-form__title {
+    font-size: -webkit-calc( 1.71429rem + 13 * (100vw - 320px ) / 673);
+    font-size: calc( 1.71429rem + 13 * (100vw - 320px ) / 673);
+  }
+
+  .portfolio_info__desc {
+    font-size: -webkit-calc( 1.14286rem + 4 * (100vw - 320px ) / 673);
+    font-size: calc( 1.14286rem + 4 * (100vw - 320px ) / 673);
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -1213,6 +1370,28 @@ div.wpcf7-response-output {
     font-size: -webkit-calc(1.28571rem + 4px);
     font-size: calc(1.28571rem + 4px);
   }
+
+  .portfolio__title {
+    font-size: -webkit-calc(1.71429rem + 28px);
+    font-size: calc(1.71429rem + 28px);
+  }
+
+  .portfolio__nav ul li {
+    font-size: -webkit-calc(1rem + 8px);
+    font-size: calc(1rem + 8px);
+  }
+
+  .portfolio_info h2,
+  .portfolio_info .modal .main-form__title,
+  .modal .portfolio_info .main-form__title {
+    font-size: -webkit-calc(1.71429rem + 13px);
+    font-size: calc(1.71429rem + 13px);
+  }
+
+  .portfolio_info__desc {
+    font-size: -webkit-calc(1.14286rem + 4px);
+    font-size: calc(1.14286rem + 4px);
+  }
 }
 
 @media screen and (min-width: 1441px) {
@@ -1267,6 +1446,11 @@ div.wpcf7-response-output {
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  .portfolio_content__item {
+    width: -webkit-calc(25% - 20px);
+    width: calc(25% - 20px);
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -1298,6 +1482,11 @@ div.wpcf7-response-output {
 
   .main-form__action {
     right: 30px;
+  }
+
+  .portfolio_content__item {
+    width: -webkit-calc(33% - 20px);
+    width: calc(33% - 20px);
   }
 
   .modal-wrap {
@@ -1495,11 +1684,68 @@ div.wpcf7-response-output {
   .widget-area {
     padding-top: 30px;
   }
+
+  .portfolio__title {
+    margin-bottom: 45px;
+  }
+
+  .portfolio__nav {
+    margin-bottom: 30px;
+  }
+
+  .portfolio__nav ul li a {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .portfolio_content {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 45px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .portfolio_info h2,
+  .portfolio_info .modal .main-form__title,
+  .modal .portfolio_info .main-form__title {
+    margin-bottom: 30px;
+  }
+
+  .portfolio_info__desc {
+    margin-bottom: 45px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .portfolio_content__item {
+    width: -webkit-calc(50% - 20px);
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio__nav ul li {
+    font-size: 14px;
+  }
+
+  .portfolio__nav ul li a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .social ul li {
     width: 30px;
     height: 30px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .portfolio_content__item {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

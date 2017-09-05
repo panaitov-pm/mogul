@@ -13,7 +13,7 @@ get_header(); ?>
 		<main id="main" class="site-main">
 		<div class="blog-wrap">
 		<div class="row">
-			<div class="col-sm-8 col-md-9">
+			<div class="col-sm-8 col-lg-9">
 				<?php
 				if ( have_posts() ) : ?>
 
@@ -38,7 +38,7 @@ get_header(); ?>
 
 				endif; ?>
 			</div>
-			<div class="col-sm-2 col-sm-offset-1">
+			<div class="col-sm-4 col-lg-2 col-lg-offset-1">
 				<?php get_sidebar(); ?>
 			</div>
 		</div>

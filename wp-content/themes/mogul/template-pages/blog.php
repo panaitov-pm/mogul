@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the Book Appointment
+ * 
  * Template name: Blog
  *
  * Contains the closing of the #content div and all content after.

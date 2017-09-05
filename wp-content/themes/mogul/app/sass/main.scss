@@ -277,15 +277,15 @@
               content: none;
             }
           }
-          &:hover,
-          &.active {
-            @include max-width(sm) {
-              color: #000;
-            }
-            &:after {
-              transform: scale(1, 1);
-            }
+        &:hover,
+        &.active {
+          @include max-width(sm) {
+            color: #000;
           }
+          &:after {
+            transform: scale(1, 1);
+          }
+        }
        }
      }
    }
@@ -825,6 +825,149 @@
     }
   }
 
+/* -----------------------------------------
+ PORTFOLIO
+----------------------------------------- */
+  .portfolio {
+    &__title {
+      @include font-size($minSize: 24, $maxSize: 52);
+      margin-bottom: 95px;
+      letter-spacing: 5px;
+      @include max-width(sm) {
+        margin-bottom: 45px;
+      }
+    }
+    &__nav {
+      margin-bottom: 64px;
+      @include max-width(sm) {
+        margin-bottom: 30px;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        text-transform: uppercase;
+        li {
+          @include font-size($minSize: 14, $maxSize: 22);
+          color: #282828;
+          font-weight: bold;
+          letter-spacing: 1.1px;
+          @include max-width(xxs) {
+            font-size: 14px;
+          }
+          &:not(:last-child) {
+           border-right: 1px solid #282828; 
+          }
+          a {
+            position: relative;
+            padding: 6px 50px;
+            @include max-width(sm) {
+              padding-left: 20px;
+              padding-right: 20px;
+            }
+            @include max-width(xxs) {
+              padding-left: 10px;
+              padding-right: 10px;
+            }
+            &:after {
+              content: '';
+              position: absolute;
+              top: calc(100% - 6px);
+              left: 0;
+              right: 0;
+              height: 1px;
+              transform: scale(0, 1);
+              transform-origin: 50% 50%;
+              transition: transform 0.4s ease;
+              background-color: #282828;
+            }
+            &:hover {
+              &:after {
+                transform: scale(1, 1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .portfolio_content {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 184px;
+    padding-top: 45px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid rgba(#282828, 0.3);
+    border-top: 1px solid rgba(#282828, 0.3);
+    @include max-width(sm) {
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 45px;
+      padding-top: 30px;
+      padding-bottom: 10px;
+    }
+    &__inner {
+      width: 100%;
+      max-width: 1506px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 0;
+    }
+    &__item {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      width: calc(20% - 20px);
+      @include max-width(lg) {
+        width: calc(25% - 20px);
+      }
+      @include max-width(md) {
+        width: calc(33% - 20px);
+      }
+      @include max-width(xs) {
+        width: calc(50% - 20px);
+      }
+      @include max-width(360px) {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  .portfolio_info {
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    h2 {
+      @include font-size($minSize: 24, $maxSize: 37);
+      margin-bottom: 60px;
+      font-family: "Futura LT";
+      font-weight: bold;
+      color: #000000;
+      letter-spacing: 1.1px;
+      @include max-width(sm) {
+        margin-bottom: 30px;
+      }
+    }
+    &__desc {
+      @include font-size($minSize: 16, $maxSize: 20);
+      margin-bottom: 180px;
+      font-weight: bold;
+      line-height: 1.55;
+      @include max-width(sm) {
+        margin-bottom: 45px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+    }
+  }
 /*-----Modal form*/
   .modal-wrap {
     position: fixed;

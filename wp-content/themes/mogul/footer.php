@@ -92,11 +92,14 @@
         </svg>
       </button>
       <div class="modal-form">
-    	  <?php if (is_page(17)) : ?>
-    	  	<?php the_field('main_form', 'options'); ?>
-    	  <?php else if (is_page(9)) : ?>
-    	  <?php else: ?>
-    	  <?php ?>
+    	  <?php if (is_page(17)) {
+    	  	the_field('main_form', 'options');
+    	  } 
+    	  if(is_page(9)) {
+    	  	
+    	  }?>
+    	  <?php if (is_page(13)) :?>
+					<img class="modal-form__img" src="" alt="">
     	  <?php endif; ?>
       </div>
       <!-- /.modal-form -->

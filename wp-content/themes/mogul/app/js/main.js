@@ -30,7 +30,14 @@
                             action: 'postID'
                         }
                     });
-                    
+                 }
+
+                 if ($this.hasClass('portfolio_content__link')) {
+                    var link = $this.attr('href'),
+                        $modalImg = $('.modal-form__img');
+                    $modalImg.attr('src', '');
+                    $modalImg.attr('src', link);
+                    $('.modal').addClass('modal--img');
                  }
                 openCloseModal();
             }); // end click
@@ -58,6 +65,8 @@
             // }
             // $('.review__desc').html('<span class="first_word">'+a.substring(0, b)+'</span>'+a.substring(b, a.length));
             // });
+        /*------------Show modal with portfolio image*/
+            //$('.portfolio_content__item a').fancybox();
     }); // end ready
 
 
@@ -84,6 +93,7 @@
             } else {
                 $body.removeClass('js-modal-open');
                 $modalWrap.removeClass('js-modal-open');
+                $modalWrap.find('.modal').removeClass('modal--img')
             }
         }
 

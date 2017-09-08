@@ -25,11 +25,6 @@ if ( ! function_exists( 'mogul_scripts' ) ) :
 	// CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
 	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), '3.1.1', true );
 
-	wp_enqueue_script( 'mogul-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'mogul-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-	//
 	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/app/js/main.js', array(), '0.0.1', true );
 
 	wp_localize_script( 'main-script', 'php_path', array(

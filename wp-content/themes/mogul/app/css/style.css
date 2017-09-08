@@ -1348,6 +1348,141 @@ div.wpcf7-response-output {
   transform: translateY(-3px);
 }
 
+/* -----------------------------------------
+ SERVICES
+----------------------------------------- */
+
+.services .portfolio__title {
+  font-size: 24px;
+  margin-bottom: 83px;
+}
+
+.services .portfolio__nav {
+  position: relative;
+  margin-bottom: 68px;
+  padding-top: 68px;
+}
+
+.services .portfolio__nav:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-width: 1184px;
+  height: 1px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: rgba(40, 40, 40, 0.3);
+}
+
+.services .portfolio__nav ul li a {
+  padding-left: 40px;
+  padding-right: 40px;
+  letter-spacing: 4.5px;
+}
+
+.services_content__item {
+  position: relative;
+  padding-top: 117px;
+}
+
+.services_content__item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  max-width: 1184px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: rgba(40, 40, 40, 0.3);
+}
+
+.services_content .portfolio_content__inner {
+  width: 100%;
+  max-width: 1426px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 14px;
+}
+
+.service {
+  display: inline-block;
+  vertical-align: top;
+  width: -webkit-calc(33% - 120px);
+  width: calc(33% - 120px);
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 181px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.service__name,
+.service__price {
+  font-size: 20px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.service__price {
+  margin-bottom: 16px;
+}
+
+.additional,
+.travel {
+  text-align: center;
+}
+
+.additional__title,
+.travel__title {
+  margin-bottom: 84px;
+}
+
+.additional__item,
+.travel__item {
+  display: inline-block;
+  vertical-align: top;
+  width: -webkit-calc(20% - 50px);
+  width: calc(20% - 50px);
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 50px;
+}
+
+.service_examples__title {
+  text-align: center;
+  margin-bottom: 110px;
+  text-transform: uppercase;
+}
+
+.service_examples__list {
+  width: 100%;
+  max-width: 782px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 101px;
+  font-size: 14px;
+  line-height: 2;
+  text-transform: uppercase;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}
+
+.service_examples__list li a:hover {
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  color: #000;
+}
+
 /*-----Modal form*/
 
 .modal-wrap {
@@ -1561,6 +1696,27 @@ div.wpcf7-response-output {
     font-size: -webkit-calc( 1.28571rem + 10 * (100vw - 320px ) / 673);
     font-size: calc( 1.28571rem + 10 * (100vw - 320px ) / 673);
   }
+
+  .services .portfolio__title {
+    font-size: -webkit-calc( 1.71429rem + 20 * (100vw - 320px ) / 673);
+    font-size: calc( 1.71429rem + 20 * (100vw - 320px ) / 673);
+  }
+
+  .service {
+    font-size: -webkit-calc( 1.14286rem + 4 * (100vw - 320px ) / 673);
+    font-size: calc( 1.14286rem + 4 * (100vw - 320px ) / 673);
+  }
+
+  .service__name,
+  .service__price {
+    font-size: -webkit-calc( 1.42857rem + 2 * (100vw - 320px ) / 673);
+    font-size: calc( 1.42857rem + 2 * (100vw - 320px ) / 673);
+  }
+
+  .service_examples__list {
+    font-size: -webkit-calc( 1rem + 8 * (100vw - 320px ) / 673);
+    font-size: calc( 1rem + 8 * (100vw - 320px ) / 673);
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -1702,6 +1858,27 @@ div.wpcf7-response-output {
   .brands__title {
     font-size: -webkit-calc(1.28571rem + 10px);
     font-size: calc(1.28571rem + 10px);
+  }
+
+  .services .portfolio__title {
+    font-size: -webkit-calc(1.71429rem + 20px);
+    font-size: calc(1.71429rem + 20px);
+  }
+
+  .service {
+    font-size: -webkit-calc(1.14286rem + 4px);
+    font-size: calc(1.14286rem + 4px);
+  }
+
+  .service__name,
+  .service__price {
+    font-size: -webkit-calc(1.42857rem + 2px);
+    font-size: calc(1.42857rem + 2px);
+  }
+
+  .service_examples__list {
+    font-size: -webkit-calc(1rem + 8px);
+    font-size: calc(1rem + 8px);
   }
 }
 
@@ -2100,6 +2277,32 @@ div.wpcf7-response-output {
     vertical-align: middle;
     width: 100%;
     max-width: 200px;
+    margin-bottom: 30px;
+  }
+
+  .services .portfolio__title {
+    margin-bottom: 40px;
+  }
+
+  .services_content__item {
+    padding-top: 50px;
+  }
+
+  .service {
+    margin-bottom: 30px;
+  }
+
+  .additional__title,
+  .travel__title {
+    margin-bottom: 30px;
+  }
+
+  .additional__item,
+  .travel__item {
+    margin-bottom: 30px;
+  }
+
+  .service_examples__list {
     margin-bottom: 30px;
   }
 }

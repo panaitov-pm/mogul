@@ -4,9 +4,9 @@
 *
 */
 
-add_action('wp_ajax_get_cat', 'ajax_show_categoty_posts' );
-add_action('wp_ajax_nopriv_get_cat', 'ajax_show_categoty_posts' );
-
+/*
+* Loading category posts
+*/
 function ajax_show_categoty_posts() {
 
   $link = ! empty( $_POST['link'] ) ? esc_attr( $_POST['link'] ) : false ;
@@ -45,6 +45,29 @@ function ajax_show_categoty_posts() {
 
    wp_die();
 }
+
+add_action('wp_ajax_get_cat', 'ajax_show_categoty_posts' );
+add_action('wp_ajax_nopriv_get_cat', 'ajax_show_categoty_posts' );
+
+/*
+* Load more posts button
+*/
+function more_posts_callback() {
+  $offset = ( $_POST[ 'offset' ] ) ? (int) $_POST[ 'offset' ] : 6;
+  query_posts( "posts_per_page=2&offset=". $offset );?>
+  
+  <?php if (have_posts() ) : ?>
+    <?php while (have_posts() ) :the_post(); ?>
+        <?php get_template_part( 'template-parts/review', 'loading' ); ?>
+      <?php endwhile; ?>
+  <?php endif; ?>
+
+<?php  
+  wp_reset_query();
+  wp_die();
+}
+add_action( 'wp_ajax_more_posts', 'more_posts_callback' );
+add_action( 'wp_ajax_nopriv_more_posts', 'more_posts_callback' );
 
 function ajax_action() { 
   wp_register_script('ajax', plugins_url('ajax.js', __FILE__ ), array('jquery'), '', true);

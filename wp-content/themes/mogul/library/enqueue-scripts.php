@@ -31,6 +31,10 @@ if ( ! function_exists( 'mogul_scripts' ) ) :
 
 	//
 	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/app/js/main.js', array(), '0.0.1', true );
+
+	wp_localize_script( 'main-script', 'php_path', array(
+			'ajax_url' => admin_url( 'admin-ajax.php') 
+		) );
 	// Add the comment-reply library on pages where it is necessary
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

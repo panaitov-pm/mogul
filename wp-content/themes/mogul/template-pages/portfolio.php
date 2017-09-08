@@ -71,7 +71,7 @@ get_header(); ?>
               <?php
             }?>
       </div>
-      <!-- /.blog-wrap -->
+      <!-- /.portfolio -->
     </main><!-- #main -->
   </div><!-- #primary -->
 

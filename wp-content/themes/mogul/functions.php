@@ -93,14 +93,12 @@ add_filter('document_title_parts', function($title){
 });
 
 /*--------------ADD CUSTOM FUNCTIONS--------------------*/
-function ajax_posts_loading() {
-	wp_localize_script( 'main-script', 'get_posts', array(
-			'ajaxurl' => admin_url('admin-ajax.php' ),
-			'name' => wp_get_current_user()->display_name
-		) );
-	wp_enqueue_script( 'main-script');
+/*function getPostId() {
+	$id = "hello";
+	wp_die();
 }
-add_action( 'wp_enqueue_scripts', 'ajax_posts_loading' );
+add_action( 'wp_ajax_postID', 'getPostId' );
+add_action( 'wp_ajax_nopriv_postID', 'getPostId' );*/
 
 
 /*
@@ -109,7 +107,7 @@ add_action( 'wp_enqueue_scripts', 'ajax_posts_loading' );
 function true_duplicate_post_as_draft(){
 	global $wpdb;
 	if (! ( isset( $_GET['post']) || isset( $_POST['post'])  || ( isset($_REQUEST['action']) && 'true_duplicate_post_as_draft' == $_REQUEST['action'] ) ) ) {
-		wp_die('Нечего дублировать!');
+		wp_die();
 	}
  
 	/*

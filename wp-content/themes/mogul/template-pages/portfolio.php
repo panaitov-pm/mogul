@@ -28,7 +28,11 @@ get_header(); ?>
               <div class="portfolio__nav">
                 <ul>
                   <?php foreach( $categories as $cat ): ?>
-                    <li><a href="<?php echo get_category_link( $cat -> term_id ) ?>""><?php echo $cat->name ?></a></li>
+                    <li>
+                      <a href="<?php echo get_category_link( $cat -> term_id ); ?>" data-id="<?php echo the_ID(); ?>">
+                        <?php echo $cat->name ?>
+                      </a>
+                    </li>
                   <?php endforeach; ?>
                 </ul>
               </div>

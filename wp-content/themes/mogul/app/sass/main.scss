@@ -861,6 +861,7 @@
            border-right: 1px solid #282828; 
           }
           a {
+            display: block;
             position: relative;
             padding: 6px 50px;
             @include max-width(sm) {
@@ -874,7 +875,7 @@
             &:after {
               content: '';
               position: absolute;
-              top: calc(100% - 6px);
+              top: 100%;
               left: 0;
               right: 0;
               height: 1px;
@@ -882,6 +883,9 @@
               transform-origin: 50% 50%;
               transition: transform 0.4s ease;
               background-color: #282828;
+              @include max-width(380px) {
+                content: none;
+              }
             }
             &:hover {
               &:after {
@@ -1216,6 +1220,10 @@
         position: relative;
         margin-bottom: 68px;
         padding-top: 68px;
+        @include max-width(sm) {
+          padding-top: 30px;
+          margin-bottom: 30px;
+        }
         &:before {
           content: '';
           position: absolute;
@@ -1227,10 +1235,32 @@
           transform: translateX(-50%);
           background-color: rgba(#282828,0.3);
         }
-        ul li a {
-          padding-left: 40px;
-          padding-right: 40px;
-          letter-spacing: 4.5px;
+        ul {
+          @include max-width(380px) {
+            column-count: 2;
+            display: block;
+          }
+          li {
+            @include max-width(380px) {
+              width: 100%;
+              margin-bottom: 20px;
+              &:nth-of-type(3),
+              &:nth-of-type(4),
+              &:nth-of-type(7),
+              &:nth-of-type(8){
+                border-right: 0;
+              }
+            }
+            a {
+              padding-left: 40px;
+              padding-right: 40px;
+              letter-spacing: 4.5px;
+              @include max-width(xs) {
+                padding-left: 10px;
+                padding-right: 10px;
+              }
+            }
+          }
         }
       }
     }
@@ -1273,7 +1303,19 @@
     margin-bottom: 181px;
     text-align: center;
     @include font-size($minSize: 16, $maxSize: 20);
+    @include max-width(lg) {
+      width: calc(49% - 120px);
+    }
+    @include max-width(md) {
+      width: calc(49% - 30px);
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
     @include max-width(sm) {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
       margin-bottom: 30px;
     }
     &__name,
@@ -1293,7 +1335,7 @@
     &__title {
       margin-bottom: 84px;
       @include max-width(sm) {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
       }
     }
     &__item {
@@ -1303,16 +1345,27 @@
       margin-left: 24px;
       margin-right: 24px;
       margin-bottom: 50px;
-      @include max-width(sm) {
-        margin-bottom: 30px;
+      @include max-width(md) {
+        width: calc(49% - 50px);
+        margin-bottom: 10px;
+      }
+      @include max-width(xs) {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }
   .service_examples {
+    padding-left: 15px;
+    padding-right: 15px;
     &__title {
       text-align: center;
       margin-bottom: 110px;
       text-transform: uppercase;
+      @include max-width(sm) {
+        margin-bottom: 30px;
+      }
     }
     &__list {
       width: 100%;

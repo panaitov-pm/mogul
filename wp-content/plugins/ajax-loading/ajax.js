@@ -6,17 +6,31 @@
       /*------Portfolio page loading category posts */
         $('.portfolio__nav').on('click', 'a', function(event) {
            event.preventDefault();
-           var titleCat = $(this).text();
-                linkCat = $(this).attr('href');
+           var $this = $(this),
+                titleCat = $this.text(),
+                linkCat = $this.attr('href'),
+                pageID = $this.data('page_id'),
+                catID = $this.data('cat_id');
+                
+          if (pageID) {
+            pageID = pageID;
+          } else {
+            pageID = '';
+          }
+          if (catID) {
+            catID = catID;
+          } else {
+            catID = '';
+          }
 
            document.title = titleCat;
            history.pushState({page_title: titleCat}, titleCat, linkCat);
-           ajaxCat(linkCat);
+           ajaxCat(linkCat, pageID, catID);
         });
         /*Events of the browser buttons forward and backward*/
            window.addEventListener('popstate', function (e) {
              document.title = e.state.page_title;
-             ajaxCat(location.href);
+             ajaxCat(location.href, pageID, catID);
            }, false);
       /*------Reviews page load more button*/
         $(document).on('click', '.reviews__load', function (e) {
@@ -55,13 +69,15 @@
 
   }); //end ready
   
-  function ajaxCat (linkCat) {
+  function ajaxCat (linkCat, pageID, catID) {
     $mainBox.animate({opacity: 0.3}, 300);
 
     $.post(params.ajax_url, 
       {
         action: 'get_cat',
-        link: linkCat
+        link: linkCat,
+        page_id: pageID,
+        cat_id: catID
       }, 
       function(response) {
        $mainBox.html(response).animate({opacity: 1}, 300);

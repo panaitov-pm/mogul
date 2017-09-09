@@ -1008,6 +1008,7 @@ div.wpcf7-response-output {
 }
 
 .portfolio__nav ul li a {
+  display: block;
   position: relative;
   padding: 6px 50px;
 }
@@ -1015,8 +1016,7 @@ div.wpcf7-response-output {
 .portfolio__nav ul li a:after {
   content: '';
   position: absolute;
-  top: -webkit-calc(100% - 6px);
-  top: calc(100% - 6px);
+  top: 100%;
   left: 0;
   right: 0;
   height: 1px;
@@ -1455,6 +1455,11 @@ div.wpcf7-response-output {
   margin-left: 24px;
   margin-right: 24px;
   margin-bottom: 50px;
+}
+
+.service_examples {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .service_examples__title {
@@ -1943,6 +1948,11 @@ div.wpcf7-response-output {
   .reviews__action .leave-review {
     max-width: 171px;
   }
+
+  .service {
+    width: -webkit-calc(49% - 120px);
+    width: calc(49% - 120px);
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -1989,6 +1999,20 @@ div.wpcf7-response-output {
   .brand {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .service {
+    width: -webkit-calc(49% - 30px);
+    width: calc(49% - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .additional__item,
+  .travel__item {
+    width: -webkit-calc(49% - 50px);
+    width: calc(49% - 50px);
+    margin-bottom: 10px;
   }
 
   .modal-wrap {
@@ -2284,21 +2308,28 @@ div.wpcf7-response-output {
     margin-bottom: 40px;
   }
 
+  .services .portfolio__nav {
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+
   .services_content__item {
     padding-top: 50px;
   }
 
   .service {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
   }
 
   .additional__title,
   .travel__title {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
-  .additional__item,
-  .travel__item {
+  .service_examples__title {
     margin-bottom: 30px;
   }
 
@@ -2311,6 +2342,18 @@ div.wpcf7-response-output {
   .portfolio_content__item {
     width: -webkit-calc(50% - 20px);
     width: calc(50% - 20px);
+  }
+
+  .services .portfolio__nav ul li a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .additional__item,
+  .travel__item {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -2329,6 +2372,31 @@ div.wpcf7-response-output {
   .social ul li {
     width: 30px;
     height: 30px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .portfolio__nav ul li a:after {
+    content: none;
+  }
+
+  .services .portfolio__nav ul {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    display: block;
+  }
+
+  .services .portfolio__nav ul li {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .services .portfolio__nav ul li:nth-of-type(3),
+  .services .portfolio__nav ul li:nth-of-type(4),
+  .services .portfolio__nav ul li:nth-of-type(7),
+  .services .portfolio__nav ul li:nth-of-type(8) {
+    border-right: 0;
   }
 }
 

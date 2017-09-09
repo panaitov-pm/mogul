@@ -37,36 +37,34 @@
           e.preventDefault();
           var container = $('.reviews__inner');
           if ( container.length ) {
-              var data = {
-                  action:   'more_posts',
-                  offset:   container.find('.review').length
-              };
-              $.ajax({
-                url: params.ajax_url,
-                type: 'POST',
-                dataType: 'html',
-                data: data,
-                beforeSend: function(){
-                  container.animate({opacity: 0.3}, 300);
-                  $('.reviews__load').addClass('js_loading');
-                },
-                success: function(response) {
-                  setTimeout(function() {
-                    if($(response).length) {
-                      container.append( response );
-                      container.animate({opacity: 1}, 300)
-                      $('.reviews__load').removeClass('js_loading');
-                    } else {
-                      container.animate({opacity: 1}, 300)
-                      $('.reviews__load').remove();
-                    }
-                  }, 1000);
-                }
-              });
-              
+            var data = {
+                action:   'more_posts',
+                offset:   container.find('.review').length
+            };
+            $.ajax({
+              url: params.ajax_url,
+              type: 'POST',
+              dataType: 'html',
+              data: data,
+              beforeSend: function(){
+                container.animate({opacity: 0.3}, 300);
+                $('.reviews__load').addClass('js_loading');
+              },
+              success: function(response) {
+                setTimeout(function() {
+                  if($(response).length) {
+                    container.append( response );
+                    container.animate({opacity: 1}, 300)
+                    $('.reviews__load').removeClass('js_loading');
+                  } else {
+                    container.animate({opacity: 1}, 300)
+                    $('.reviews__load').remove();
+                  }
+                }, 1000);
+              }
+            });
           }
-      });
-
+        });
   }); //end ready
   
   function ajaxCat (linkCat, pageID, catID) {

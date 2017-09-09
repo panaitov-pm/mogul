@@ -51,6 +51,7 @@ get_header(); ?>
         </div>
         <!-- /.reviews__btn --> 
         <?php 
+        global $wp_query;
         $brandsArgs = array(
           'post_type'      =>'brands',
           'posts_per_page' => 6,
@@ -63,7 +64,7 @@ get_header(); ?>
               <p class="brands__title">Please visit the sites below for additional reviews</p>
               <div class="brands__list reviews-wrap">
                 <?php while($brands->have_posts()): $brands->the_post() ?>
-                  <a href="#" class="brand js-show-modal" data-id="<?php echo get_the_ID(); ?>">
+                  <a href="#" class="brand js-show-modal" data-post_id="<?php the_ID(); ?>">
                     <?php the_post_thumbnail(); ?>
                   </a>
                   <!-- /.brand -->

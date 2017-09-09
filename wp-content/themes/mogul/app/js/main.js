@@ -13,25 +13,27 @@
                 $body.toggleClass('js-nav-menu-active');
             });
         /*------------Show, close modal*/
-            $('.js-show-modal').on('click', function(event) {
+            $('.js-show-modal').click( function(event) {
                 event.preventDefault();
                 var $this = $(this),
-                    postId = $this.data('id');
+                    postId = $this.data('post_id'),
+                    pageId = $this.data('page_id');
                  $modalWrap.find('.main-form__title').text(subjectTitle);
                  $modalWrap.find('.field-subject').val(subjectTitle);
-
+            /*-------Set brand information to modal window*/
                  if ($this.hasClass('brand')) {
                     $.ajax({
-                        url: php_path.ajax_url,
+                        url: php_path.template_url + '/template-parts/brand-modal-info.php',
                         type: 'POST',
-                        dataType: 'json',
                         data: {
-                            postId: postId,
-                            action: 'postID'
+                            postId: postId
+                        },
+                        success: function (response) {
+                            $('.modal__brand-info').html(response);
                         }
                     });
                  }
-
+            /*-------Set portfolio image to modal window*/
                  if ($this.hasClass('portfolio_content__link')) {
                     var link = $this.attr('href'),
                         $modalImg = $('.modal-form__img');

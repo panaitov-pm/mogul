@@ -29,7 +29,7 @@ get_header(); ?>
                 <ul>
                   <?php foreach( $categories as $cat ): ?>
                     <li>
-                      <a href="<?php echo get_category_link( $cat -> term_id ); ?>" data-id="<?php echo the_ID(); ?>">
+                      <a href="<?php echo get_category_link( $cat -> term_id ); ?>">
                         <?php echo $cat->name ?>
                       </a>
                     </li>
@@ -39,6 +39,7 @@ get_header(); ?>
               <div class="portfolio_content">
                 <div class="portfolio_content__inner">
                   <?php
+                  global $wp_query;
                     foreach( $categories as $cat ){
                       $arg_posts =  array(
                         'orderby'      => 'ID',
@@ -52,7 +53,7 @@ get_header(); ?>
                       <?php if ($query->have_posts() ):?>
                         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
                           <div class="portfolio_content__item">
-                            <a class="portfolio_content__link js-show-modal" href="<?php the_post_thumbnail_url(); ?> ">
+                            <a class="portfolio_content__link js-show-modal" href="<?php the_post_thumbnail_url(); ?>">
                               <?php the_post_thumbnail(); ?>
                             </a>
                           </div>

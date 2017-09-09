@@ -95,18 +95,18 @@
     	  <?php if (is_page(17)) {
     	  	the_field('main_form', 'options');
     	  } 
-    	  if(is_page(9)) {
-    	  	
-    	  }?>
-    	  <?php if (is_page(13)) :?>
+    	  if (is_page(13)) :?>
 					<img class="modal-form__img" src="" alt="">
     	  <?php endif; ?>
+        <?php if (is_page(9)) :?>
+          <div class="modal__brand-info"></div>
+        <?php endif; ?>
       </div>
       <!-- /.modal-form -->
     </div>
     <!-- /.modal -->
-  </div>
-  <!-- /.modal-wrap -->
+</div>
+<!-- /.modal-wrap -->
 
 <?php wp_footer(); ?>
 

@@ -1,8 +1,6 @@
 <?php 
 $postID = $_POST['postId'];
 require_once( $_SERVER['DOCUMENT_ROOT'] . '/mogul/wp-load.php' );?>
-<?php echo get_template_directory(); ?>
-
 <?php 
 $args = array(
   'post_type' => 'brands',

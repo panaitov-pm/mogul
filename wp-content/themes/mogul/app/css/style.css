@@ -6,6 +6,8 @@
 
 * {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
 }
 
 html {
@@ -264,8 +266,6 @@ body.js-modal-open {
   left: 0;
 }
 
-/* --------book your appointment link*/
-
 /* --------leave a review link*/
 
 .book-appointment,
@@ -431,7 +431,7 @@ body.js-modal-open {
   margin-left: 195px;
 }
 
-.main-navigation ul {
+.main-navigation > ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -442,12 +442,13 @@ body.js-modal-open {
   align-items: center;
 }
 
-.main-navigation ul li {
+.main-navigation > ul > li {
+  position: relative;
   margin-left: 19px;
   margin-right: 19px;
 }
 
-.main-navigation ul li a {
+.main-navigation > ul > li a {
   display: block;
   position: relative;
   padding-bottom: 5px;
@@ -457,11 +458,15 @@ body.js-modal-open {
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition-property: color, -webkit-transform;
+  transition-property: color, -webkit-transform;
+  transition-property: color, transform;
+  transition-property: color, transform, -webkit-transform;
 }
 
-.main-navigation ul li a:after {
+.main-navigation > ul > li a:after {
   content: '';
   position: absolute;
   top: 100%;
@@ -481,11 +486,66 @@ body.js-modal-open {
   background-color: #878484;
 }
 
-.main-navigation ul li a:hover:after,
-.main-navigation ul li a.active:after {
+.main-navigation > ul > li a:hover:after,
+.main-navigation > ul > li a.active:after {
   -webkit-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   transform: scale(1, 1);
+}
+
+.main-navigation > ul > li a:hover + .sub-menu,
+.main-navigation > ul > li a.active + .sub-menu {
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+.main-navigation .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 120%;
+  background-color: #FFF;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-box-shadow: 0 6px 12px rgba(40, 40, 40, 0.5);
+  box-shadow: 0 6px 12px rgba(40, 40, 40, 0.5);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.main-navigation .sub-menu:hover {
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+.main-navigation .sub-menu li {
+  border-top: 1px solid rgba(40, 40, 40, 0.5);
+}
+
+.main-navigation .sub-menu li a {
+  padding: 5px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-transition-property: color, -webkit-transform;
+  transition-property: color, -webkit-transform;
+  transition-property: color, transform;
+  transition-property: color, transform, -webkit-transform;
+}
+
+.main-navigation .sub-menu li a:hover {
+  -webkit-transform: translateX(3px);
+  -ms-transform: translateX(3px);
+  transform: translateX(3px);
+  color: #000;
+}
+
+.main-navigation .sub-menu li a:hover:after {
+  content: none;
 }
 
 /* -----------------------------------------
@@ -1488,6 +1548,39 @@ div.wpcf7-response-output {
   color: #000;
 }
 
+.additional {
+  text-transform: uppercase;
+  margin-bottom: 51px;
+}
+
+.additional ul {
+  padding-top: 30px;
+  list-style-position: inside;
+}
+
+.additional ul li {
+  position: relative;
+  padding-left: 25px;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.additional ul li:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.additional ul li:before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
 /*-----Modal form*/
 
 .modal-wrap {
@@ -1732,6 +1825,11 @@ div.wpcf7-response-output {
     font-size: calc( 1rem + 8 * (100vw - 320px ) / 673);
   }
 
+  .additional ul li {
+    font-size: -webkit-calc( 1rem + 1 * (100vw - 320px ) / 673);
+    font-size: calc( 1rem + 1 * (100vw - 320px ) / 673);
+  }
+
   .modal__brand-info {
     font-size: -webkit-calc( 1rem + 4 * (100vw - 320px ) / 673);
     font-size: calc( 1rem + 4 * (100vw - 320px ) / 673);
@@ -1900,6 +1998,11 @@ div.wpcf7-response-output {
     font-size: calc(1rem + 8px);
   }
 
+  .additional ul li {
+    font-size: -webkit-calc(1rem + 1px);
+    font-size: calc(1rem + 1px);
+  }
+
   .modal__brand-info {
     font-size: -webkit-calc(1rem + 4px);
     font-size: calc(1rem + 4px);
@@ -1974,14 +2077,81 @@ div.wpcf7-response-output {
   }
 }
 
-@media screen and (max-width: 992px) {
-  .main-navigation {
-    margin-left: 160px;
-  }
-
-  .main-navigation ul li {
+@media screen and (max-width: 1060px) {
+  .main-navigation > ul > li {
     margin-left: 15px;
     margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hamburger {
+    display: block;
+  }
+
+  .main-navigation {
+    margin-left: 0;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    bottom: 0;
+    width: 250px;
+    overflow-y: auto;
+    background-color: #FFF;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+
+  .js-nav-menu-active .main-navigation {
+    right: -5%;
+    -webkit-box-shadow: -5px 0 5px -3px rgba(0, 0, 0, 0.5);
+    box-shadow: -5px 0 5px -3px rgba(0, 0, 0, 0.5);
+  }
+
+  .main-navigation > ul {
+    display: block;
+    padding-top: 40px;
+  }
+
+  .main-navigation > ul > li {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .main-navigation > ul > li:not(:last-child) {
+    border-bottom: 1px solid #878484;
+  }
+
+  .main-navigation > ul > li a {
+    padding-top: 5px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .main-navigation > ul > li a:after {
+    content: none;
+  }
+
+  .main-navigation > ul > li a:hover,
+  .main-navigation > ul > li a.active {
+    color: #000;
+    -webkit-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+
+  .main-navigation .sub-menu {
+    position: relative;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .main-navigation .sub-menu li a {
+    padding-left: 25px;
   }
 
   .site-footer {
@@ -2060,63 +2230,6 @@ div.wpcf7-response-output {
   .book-appointment,
   .leave-review {
     max-width: 80px;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .main-navigation {
-    margin-left: 0;
-    position: fixed;
-    top: 0;
-    right: -250px;
-    bottom: 0;
-    width: 250px;
-    overflow-y: auto;
-    background-color: #FFF;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    z-index: 999;
-  }
-
-  .js-nav-menu-active .main-navigation {
-    right: -5%;
-    -webkit-box-shadow: -5px 0 5px -3px rgba(0, 0, 0, 0.5);
-    box-shadow: -5px 0 5px -3px rgba(0, 0, 0, 0.5);
-  }
-
-  .main-navigation ul {
-    display: block;
-    padding-top: 40px;
-  }
-
-  .main-navigation ul li {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .main-navigation ul li:not(:last-child) {
-    border-bottom: 1px solid #878484;
-  }
-
-  .main-navigation ul li:not(:first-child) {
-    border-top: 1px solid #C3C0C0;
-  }
-
-  .main-navigation ul li a {
-    padding-top: 5px;
-    padding-left: 13px;
-    padding-right: 13px;
-  }
-
-  .main-navigation ul li a:after {
-    content: none;
-  }
-
-  .main-navigation ul li a:hover,
-  .main-navigation ul li a.active {
-    color: #000;
   }
 
   .main-info {

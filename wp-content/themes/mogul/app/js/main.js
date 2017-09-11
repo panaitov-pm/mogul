@@ -54,6 +54,7 @@
                 event.preventDefault();
                 openCloseModal();
             }); // end click
+
         /*------------Set main form subject to input value*/
             $(document).on('click', '.main-form__btn', function() {
                 $siteMain.find('.field-subject').val(subjectTitle);
@@ -73,8 +74,20 @@
 
 
     $(window).on('load resize ready', function() {
-        //----------Delete class
+        //----------Close mobile menu
             $body.removeClass('js-nav-menu-active');
+
+            if (window.matchMedia('(max-width: 992px)').matches) {
+                $('.main-navigation').on('click', 'a', function(event) {
+                    event.preventDefault();
+                    var link = $(this).attr('href');
+                    
+                    $body.removeClass('js-nav-menu-active');
+                    setTimeout(function() {
+                        window.location.href = link;
+                    }, 300);
+                });
+            }
     });
 
     //---------Is visible page

@@ -884,6 +884,15 @@ div.wpcf7-response-output {
                 border-radius: 50%;
                 background-color: #000;
             }
+            a {
+            	display: inline-block;
+            	transition: 0.3s ease;
+            	transition-property: color, transform;
+            	&:hover {
+            		color: #000;
+            		transform: translateX(5px);
+            	}
+            }
         }
     }
 }
@@ -1482,7 +1491,7 @@ div.wpcf7-response-output {
     }
 }
 
-.additional {
+.additional_task {
     text-transform: uppercase;
     margin-bottom: 51px;
     ul {
@@ -1506,6 +1515,15 @@ div.wpcf7-response-output {
                 height: 6px;
                 border-radius: 50%;
                 background-color: #000;
+            }
+            a {
+            	display: inline-block;
+            	transition: 0.3s ease;
+            	transition-property: color, transform;
+            	&:hover {
+            		color: #000;
+            		transform: translateX(5px);
+            	}
             }
         }
     }
@@ -1575,8 +1593,15 @@ div.wpcf7-response-output {
         }
     }
     &__brand-info {
+    	max-height: 0;
         text-align: center;
+    	will-change: max-height;
+    	overflow: hidden;
+    	transition: max-height 0.7s ease;
         @include font-size($minSize: 14, $maxSize: 18);
+        &.js-modal-open {
+        	max-height: 640px;
+        }
         h4 {
             margin-bottom: 30px;
         }

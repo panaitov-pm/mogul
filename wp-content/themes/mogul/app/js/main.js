@@ -13,13 +13,16 @@
                 $body.toggleClass('js-nav-menu-active');
             });
         /*------------Show, close modal*/
-            $('.js-show-modal').click( function(event) {
+        var $modalForm = $('.modal-form'),
+            $form = $modalForm.find('form')[0];
+            $(document).on('click', '.js-show-modal', function(event) {
                 event.preventDefault();
                 var $this = $(this),
                     postId = $this.data('post_id'),
-                    pageId = $this.data('page_id');
-                 $modalWrap.find('.main-form__title').text(subjectTitle);
-                 $modalWrap.find('.field-subject').val(subjectTitle);
+                    pageId = $this.data('page_id'),
+                    $modalBrand = $('.modal__brand-info');
+                $modalWrap.find('.main-form__title').text(subjectTitle);
+                $modalWrap.find('.field-subject').val(subjectTitle);
             /*-------Set brand information to modal window*/
                  if ($this.hasClass('brand')) {
                     $.ajax({
@@ -28,8 +31,15 @@
                         data: {
                             postId: postId
                         },
-                        success: function (response) {
-                            $('.modal__brand-info').html(response);
+                        beforeSend: function() {
+                            $modalBrand.html(' ');
+                            $modalBrand.removeClass('js-modal-open');
+                        },
+                        success: function(response) {
+                            $modalBrand.html(response);
+                            setTimeout(function() {
+                                $modalBrand.addClass('js-modal-open');
+                            }, 300);
                         }
                     });
                  }
@@ -46,6 +56,10 @@
 
              $modalWrap.click(function(e){
                 openCloseModal();
+                if ( $($form).length ) {
+                    $form.reset();
+                    $modalForm.find('[class*=not-valid-tip]').hide();
+                }
             }).children().click(function(e){        
                 e.stopPropagation();   
             }); // end click
@@ -53,23 +67,23 @@
             $('.modal__close').click(function(event) {
                 event.preventDefault();
                 openCloseModal();
+                if ( $($form).length ) {
+                    $form.reset();
+                    $modalForm.find('[class*=not-valid-tip]').hide();
+                }
             }); // end click
 
         /*------------Set main form subject to input value*/
             $(document).on('click', '.main-form__btn', function() {
                 $siteMain.find('.field-subject').val(subjectTitle);
             });
-        /*------------Set review first 5 words font size */
-            // var a = new String;
-            // a = $('.review__desc').html();
-            // var b = a.indexOf(' '); 
-            // if (b == -1) {
-            // b = a.length;
-            // }
-            // $('.review__desc').html('<span class="first_word">'+a.substring(0, b)+'</span>'+a.substring(b, a.length));
-            // });
-        /*------------Show modal with portfolio image*/
-            //$('.portfolio_content__item a').fancybox();
+        /*------------Set main form subject to input value*/
+            $(document).on('click', '.contact-form__btn a', function() {
+                var title = $(this).find('img').attr('alt');
+                console.log(title);
+
+                $modalWrap.find('.main-form__title').text(title);
+            });
     }); // end ready
 
 

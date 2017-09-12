@@ -34,7 +34,7 @@ function ajax_show_categoty_posts() {
     <?php if (have_posts() ):?>
       <?php while ( have_posts() ) : the_post(); ?>
         <div class="portfolio_content__item">
-          <a href="#"><?php the_post_thumbnail(); ?></a>
+          <a class="portfolio_content__link js-show-modal" href="<?php the_post_thumbnail_url(); ?>"><?php the_post_thumbnail(); ?></a>
         </div>
         <!-- /.portfolio_content__item -->
       <?php endwhile; wp_reset_postdata()?>

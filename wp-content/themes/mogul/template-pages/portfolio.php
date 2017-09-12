@@ -19,7 +19,7 @@ get_header(); ?>
             $arg_cat = array(
               'orderby'      => 'ID',
               'order'        => 'ASC',
-              'include'      => array(1,3,4,5), // id рубрики, из которых надо выводить
+              'include'      => array(1,3,4,5),
               'taxonomy'     => 'category',
             );
             $categories = get_categories( $arg_cat );?>
@@ -29,7 +29,7 @@ get_header(); ?>
                 <ul>
                   <?php foreach( $categories as $cat ): ?>
                     <li>
-                      <a href="<?php echo get_category_link( $cat -> term_id ); ?>">
+                      <a href="<?php echo get_category_link( $cat -> term_id ); ?>" data-page_id="<?php echo the_ID(); ?>" data-cat_id="<?php echo $cat -> term_id ?>">
                         <?php echo $cat->name ?>
                       </a>
                     </li>

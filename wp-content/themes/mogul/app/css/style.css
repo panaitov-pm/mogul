@@ -1013,6 +1013,23 @@ div.wpcf7-response-output {
   background-color: #000;
 }
 
+.widget ul li a {
+  display: inline-block;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-transition-property: color, -webkit-transform;
+  transition-property: color, -webkit-transform;
+  transition-property: color, transform;
+  transition-property: color, transform, -webkit-transform;
+}
+
+.widget ul li a:hover {
+  color: #000;
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
+}
+
 .widget-title {
   margin-bottom: 40px;
   font-size: 18px;
@@ -1548,17 +1565,17 @@ div.wpcf7-response-output {
   color: #000;
 }
 
-.additional {
+.additional_task {
   text-transform: uppercase;
   margin-bottom: 51px;
 }
 
-.additional ul {
+.additional_task ul {
   padding-top: 30px;
   list-style-position: inside;
 }
 
-.additional ul li {
+.additional_task ul li {
   position: relative;
   padding-left: 25px;
   font-size: 14px;
@@ -1566,11 +1583,11 @@ div.wpcf7-response-output {
   text-align: left;
 }
 
-.additional ul li:not(:last-of-type) {
+.additional_task ul li:not(:last-of-type) {
   margin-bottom: 20px;
 }
 
-.additional ul li:before {
+.additional_task ul li:before {
   content: '';
   position: absolute;
   top: 8px;
@@ -1579,6 +1596,23 @@ div.wpcf7-response-output {
   height: 6px;
   border-radius: 50%;
   background-color: #000;
+}
+
+.additional_task ul li a {
+  display: inline-block;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-transition-property: color, -webkit-transform;
+  transition-property: color, -webkit-transform;
+  transition-property: color, transform;
+  transition-property: color, transform, -webkit-transform;
+}
+
+.additional_task ul li a:hover {
+  color: #000;
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 /*-----Modal form*/
@@ -1650,8 +1684,17 @@ div.wpcf7-response-output {
 }
 
 .modal__brand-info {
+  max-height: 0;
   text-align: center;
+  will-change: max-height;
+  overflow: hidden;
+  -webkit-transition: max-height 0.7s ease;
+  transition: max-height 0.7s ease;
   font-size: 14px;
+}
+
+.modal__brand-info.js-modal-open {
+  max-height: 640px;
 }
 
 .modal__brand-info h4 {
@@ -1825,7 +1868,7 @@ div.wpcf7-response-output {
     font-size: calc( 1rem + 8 * (100vw - 320px ) / 673);
   }
 
-  .additional ul li {
+  .additional_task ul li {
     font-size: -webkit-calc( 1rem + 1 * (100vw - 320px ) / 673);
     font-size: calc( 1rem + 1 * (100vw - 320px ) / 673);
   }
@@ -1998,7 +2041,7 @@ div.wpcf7-response-output {
     font-size: calc(1rem + 8px);
   }
 
-  .additional ul li {
+  .additional_task ul li {
     font-size: -webkit-calc(1rem + 1px);
     font-size: calc(1rem + 1px);
   }

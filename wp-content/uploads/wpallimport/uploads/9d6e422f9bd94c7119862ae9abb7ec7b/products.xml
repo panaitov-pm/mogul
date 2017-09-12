@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<id><![CDATA[123]]></id>
+		<title><![CDATA[Дом]]></title>
+		<content><![CDATA[]]></content>
+		<sku><![CDATA[]]></sku>
+		<producttype><![CDATA[simple]]></producttype>
+		<parentproductid><![CDATA[0]]></parentproductid>
+		<undefined6><![CDATA[]]></undefined6>
+		<undefined7><![CDATA[]]></undefined7>
+		<undefined8><![CDATA[2]]></undefined8>
+		<undefined9><![CDATA[Киевский]]></undefined9>
+		<undefined10><![CDATA[]]></undefined10>
+		<undefined11><![CDATA[]]></undefined11>
+		<undefined12><![CDATA[]]></undefined12>
+		<undefined13><![CDATA[3]]></undefined13>
+		<undefined14><![CDATA[45]]></undefined14>
+		<productattributes><![CDATA[a:4:{s:15:"pa_rooms_number";a:6:{s:4:"name";s:15:"pa_rooms_number";s:5:"value";s:0:"";s:8:"position";i:0;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_square";a:6:{s:4:"name";s:9:"pa_square";s:5:"value";s:0:"";s:8:"position";i:1;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:17:"pa_building_floor";a:6:{s:4:"name";s:17:"pa_building_floor";s:5:"value";s:0:"";s:8:"position";i:3;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_district";a:6:{s:4:"name";s:11:"pa_district";s:5:"value";s:0:"";s:8:"position";i:4;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}]]></productattributes>
+	</node>
+	<node>
+		<id><![CDATA[125]]></id>
+		<title><![CDATA[Двухкомнатная квартира]]></title>
+		<content><![CDATA[]]></content>
+		<sku><![CDATA[]]></sku>
+		<producttype><![CDATA[simple]]></producttype>
+		<parentproductid><![CDATA[0]]></parentproductid>
+		<undefined6><![CDATA[4]]></undefined6>
+		<undefined7><![CDATA[]]></undefined7>
+		<undefined8><![CDATA[5]]></undefined8>
+		<undefined9><![CDATA[Киевский]]></undefined9>
+		<undefined10><![CDATA[]]></undefined10>
+		<undefined11><![CDATA[]]></undefined11>
+		<undefined12><![CDATA[]]></undefined12>
+		<undefined13><![CDATA[2]]></undefined13>
+		<undefined14><![CDATA[29]]></undefined14>
+		<productattributes><![CDATA[a:5:{s:15:"pa_rooms_number";a:6:{s:4:"name";s:15:"pa_rooms_number";s:5:"value";s:0:"";s:8:"position";i:0;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_square";a:6:{s:4:"name";s:9:"pa_square";s:5:"value";s:0:"";s:8:"position";i:1;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:18:"pa_apartment_floor";a:6:{s:4:"name";s:18:"pa_apartment_floor";s:5:"value";s:0:"";s:8:"position";i:2;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:17:"pa_building_floor";a:6:{s:4:"name";s:17:"pa_building_floor";s:5:"value";s:0:"";s:8:"position";i:3;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_district";a:6:{s:4:"name";s:11:"pa_district";s:5:"value";s:0:"";s:8:"position";i:4;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}]]></productattributes>
+	</node>
+	<node>
+		<id><![CDATA[126]]></id>
+		<title><![CDATA[Однокомнатная квартира]]></title>
+		<content><![CDATA[]]></content>
+		<sku><![CDATA[]]></sku>
+		<producttype><![CDATA[simple]]></producttype>
+		<parentproductid><![CDATA[0]]></parentproductid>
+		<undefined6><![CDATA[5]]></undefined6>
+		<undefined7><![CDATA[Сдан]]></undefined7>
+		<undefined8><![CDATA[5]]></undefined8>
+		<undefined9><![CDATA[Приморский]]></undefined9>
+		<undefined10><![CDATA[]]></undefined10>
+		<undefined11><![CDATA[]]></undefined11>
+		<undefined12><![CDATA[Радужный ЖК]]></undefined12>
+		<undefined13><![CDATA[1]]></undefined13>
+		<undefined14><![CDATA[29]]></undefined14>
+		<productattributes><![CDATA[a:7:{s:15:"pa_rooms_number";a:6:{s:4:"name";s:15:"pa_rooms_number";s:5:"value";s:0:"";s:8:"position";i:0;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_square";a:6:{s:4:"name";s:9:"pa_square";s:5:"value";s:0:"";s:8:"position";i:1;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:18:"pa_apartment_floor";a:6:{s:4:"name";s:18:"pa_apartment_floor";s:5:"value";s:0:"";s:8:"position";i:2;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:17:"pa_building_floor";a:6:{s:4:"name";s:17:"pa_building_floor";s:5:"value";s:0:"";s:8:"position";i:3;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_district";a:6:{s:4:"name";s:11:"pa_district";s:5:"value";s:0:"";s:8:"position";i:4;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:21:"pa_residental_complex";a:6:{s:4:"name";s:21:"pa_residental_complex";s:5:"value";s:0:"";s:8:"position";i:5;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:21:"pa_building_condition";a:6:{s:4:"name";s:21:"pa_building_condition";s:5:"value";s:0:"";s:8:"position";i:6;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}]]></productattributes>
+	</node>
+	<node>
+		<id><![CDATA[129]]></id>
+		<title><![CDATA[Двухкомнатная квартира]]></title>
+		<content><![CDATA[Продается 2 - комнатная в г.Одесса. Приморский район/Среднефонтанская, ул.Сегедская.
+
+Хорошая транспортная развязка в любую точку города, отличная инфраструктура. 4 этаж 5 этажного дома. Квартира в хорошем состоянии, балкон застеклен, металлопластиковые окна, счетчики на воду, в санузле и кухне кафель, в комнате пол - паркет, бронированная входная дверь. Общая площадь - 32,2 кв. м., жилая - 15,6 кв. м., кухня 6,6 кв. м.
+
+Есть возможность продажи квартиры со всей мебелью и техникой. В квартире остается вся мебель и техника.]]></content>
+		<sku><![CDATA[]]></sku>
+		<producttype><![CDATA[simple]]></producttype>
+		<parentproductid><![CDATA[0]]></parentproductid>
+		<undefined6><![CDATA[3]]></undefined6>
+		<undefined7><![CDATA[]]></undefined7>
+		<undefined8><![CDATA[5]]></undefined8>
+		<undefined9><![CDATA[Киевский]]></undefined9>
+		<undefined10><![CDATA[]]></undefined10>
+		<undefined11><![CDATA[11900]]></undefined11>
+		<undefined12><![CDATA[Радужный ЖК]]></undefined12>
+		<undefined13><![CDATA[2]]></undefined13>
+		<undefined14><![CDATA[29]]></undefined14>
+		<productattributes><![CDATA[a:7:{s:15:"pa_rooms_number";a:6:{s:4:"name";s:15:"pa_rooms_number";s:5:"value";s:0:"";s:8:"position";i:0;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_square";a:6:{s:4:"name";s:9:"pa_square";s:5:"value";s:0:"";s:8:"position";i:1;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:18:"pa_apartment_floor";a:6:{s:4:"name";s:18:"pa_apartment_floor";s:5:"value";s:0:"";s:8:"position";i:2;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:17:"pa_building_floor";a:6:{s:4:"name";s:17:"pa_building_floor";s:5:"value";s:0:"";s:8:"position";i:3;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:15:"pa_price_square";a:6:{s:4:"name";s:15:"pa_price_square";s:5:"value";s:0:"";s:8:"position";i:4;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:21:"pa_residental_complex";a:6:{s:4:"name";s:21:"pa_residental_complex";s:5:"value";s:0:"";s:8:"position";i:5;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_district";a:6:{s:4:"name";s:11:"pa_district";s:5:"value";s:0:"";s:8:"position";i:6;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}]]></productattributes>
+	</node>
+	<node>
+		<id><![CDATA[130]]></id>
+		<title><![CDATA[Трехкомнатная квартира]]></title>
+		<content><![CDATA[Продается 3 - комнатная в г.Одесса. Приморский район/Среднефонтанская, ул.Сегедская.
+
+Хорошая транспортная развязка в любую точку города, отличная инфраструктура. 4 этаж 5 этажного дома. Квартира в хорошем состоянии, балкон застеклен, металлопластиковые окна, счетчики на воду, в санузле и кухне кафель, в комнате пол - паркет, бронированная входная дверь. Общая площадь - 32,2 кв. м., жилая - 15,6 кв. м., кухня 6,6 кв. м.
+
+Есть возможность продажи квартиры со всей мебелью и техникой. В квартире остается вся мебель и техника.]]></content>
+		<sku><![CDATA[]]></sku>
+		<producttype><![CDATA[simple]]></producttype>
+		<parentproductid><![CDATA[0]]></parentproductid>
+		<undefined6><![CDATA[2]]></undefined6>
+		<undefined7><![CDATA[]]></undefined7>
+		<undefined8><![CDATA[9]]></undefined8>
+		<undefined9><![CDATA[Приморский]]></undefined9>
+		<undefined10><![CDATA[]]></undefined10>
+		<undefined11><![CDATA[7500]]></undefined11>
+		<undefined12><![CDATA[]]></undefined12>
+		<undefined13><![CDATA[3]]></undefined13>
+		<undefined14><![CDATA[47]]></undefined14>
+		<productattributes><![CDATA[a:6:{s:15:"pa_rooms_number";a:6:{s:4:"name";s:15:"pa_rooms_number";s:5:"value";s:0:"";s:8:"position";i:0;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_square";a:6:{s:4:"name";s:9:"pa_square";s:5:"value";s:0:"";s:8:"position";i:1;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:18:"pa_apartment_floor";a:6:{s:4:"name";s:18:"pa_apartment_floor";s:5:"value";s:0:"";s:8:"position";i:2;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:17:"pa_building_floor";a:6:{s:4:"name";s:17:"pa_building_floor";s:5:"value";s:0:"";s:8:"position";i:3;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:15:"pa_price_square";a:6:{s:4:"name";s:15:"pa_price_square";s:5:"value";s:0:"";s:8:"position";i:4;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_district";a:6:{s:4:"name";s:11:"pa_district";s:5:"value";s:0:"";s:8:"position";i:5;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}]]></productattributes>
+	</node>
+	<node>
+		<id><![CDATA[131]]></id>
+		<title><![CDATA[Трехкомнатная квартира]]></title>
+		<content><![CDATA[Продается 3 - комнатная в г.Одесса. Приморский район/Среднефонтанская, ул.Сегедская.
+
+Хорошая транспортная развязка в любую точку города, отличная инфраструктура. 4 этаж 5 этажного дома. Квартира в хорошем состоянии, балкон застеклен, металлопластиковые окна, счетчики на воду, в санузле и кухне кафель, в комнате пол - паркет, бронированная входная дверь. Общая площадь - 32,2 кв. м., жилая - 15,6 кв. м., кухня 6,6 кв. м.
+
+Есть возможность продажи квартиры со всей мебелью и техникой. В квартире остается вся мебель и техника.]]></content>
+		<sku><![CDATA[]]></sku>
+		<producttype><![CDATA[simple]]></producttype>
+		<parentproductid><![CDATA[0]]></parentproductid>
+		<undefined6><![CDATA[4]]></undefined6>
+		<undefined7><![CDATA[Сдан]]></undefined7>
+		<undefined8><![CDATA[21]]></undefined8>
+		<undefined9><![CDATA[Киевский]]></undefined9>
+		<undefined10><![CDATA[]]></undefined10>
+		<undefined11><![CDATA[5000]]></undefined11>
+		<undefined12><![CDATA[Радужный ЖК]]></undefined12>
+		<undefined13><![CDATA[3]]></undefined13>
+		<undefined14><![CDATA[29]]></undefined14>
+		<productattributes><![CDATA[a:8:{s:21:"pa_residental_complex";a:6:{s:4:"name";s:21:"pa_residental_complex";s:5:"value";s:0:"";s:8:"position";i:0;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_district";a:6:{s:4:"name";s:11:"pa_district";s:5:"value";s:0:"";s:8:"position";i:1;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:21:"pa_building_condition";a:6:{s:4:"name";s:21:"pa_building_condition";s:5:"value";s:0:"";s:8:"position";i:2;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_square";a:6:{s:4:"name";s:9:"pa_square";s:5:"value";s:0:"";s:8:"position";i:3;s:10:"is_visible";i:1;s:12:"is_variation";i:1;s:11:"is_taxonomy";i:1;}s:15:"pa_price_square";a:6:{s:4:"name";s:15:"pa_price_square";s:5:"value";s:0:"";s:8:"position";i:4;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:18:"pa_apartment_floor";a:6:{s:4:"name";s:18:"pa_apartment_floor";s:5:"value";s:0:"";s:8:"position";i:5;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:17:"pa_building_floor";a:6:{s:4:"name";s:17:"pa_building_floor";s:5:"value";s:0:"";s:8:"position";i:6;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:15:"pa_rooms_number";a:6:{s:4:"name";s:15:"pa_rooms_number";s:5:"value";s:0:"";s:8:"position";i:7;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}]]></productattributes>
+	</node>
+	<node>
+		<id><![CDATA[143]]></id>
+		<title><![CDATA[Участок]]></title>
+		<content><![CDATA[]]></content>
+		<sku><![CDATA[]]></sku>
+		<producttype><![CDATA[simple]]></producttype>
+		<parentproductid><![CDATA[0]]></parentproductid>
+		<undefined6><![CDATA[]]></undefined6>
+		<undefined7><![CDATA[]]></undefined7>
+		<undefined8><![CDATA[]]></undefined8>
+		<undefined9><![CDATA[Суворовский]]></undefined9>
+		<undefined10><![CDATA[]]></undefined10>
+		<undefined11><![CDATA[]]></undefined11>
+		<undefined12><![CDATA[]]></undefined12>
+		<undefined13><![CDATA[]]></undefined13>
+		<undefined14><![CDATA[60]]></undefined14>
+		<productattributes><![CDATA[a:2:{s:9:"pa_square";a:6:{s:4:"name";s:9:"pa_square";s:5:"value";s:0:"";s:8:"position";i:1;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_district";a:6:{s:4:"name";s:11:"pa_district";s:5:"value";s:0:"";s:8:"position";i:4;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}]]></productattributes>
+	</node>
+	<node>
+		<id><![CDATA[144]]></id>
+		<title><![CDATA[Однокомнатная квартира]]></title>
+		<content><![CDATA[]]></content>
+		<sku><![CDATA[]]></sku>
+		<producttype><![CDATA[simple]]></producttype>
+		<parentproductid><![CDATA[0]]></parentproductid>
+		<undefined6><![CDATA[4]]></undefined6>
+		<undefined7><![CDATA[Сдан]]></undefined7>
+		<undefined8><![CDATA[20]]></undefined8>
+		<undefined9><![CDATA[Киевский]]></undefined9>
+		<undefined10><![CDATA[]]></undefined10>
+		<undefined11><![CDATA[]]></undefined11>
+		<undefined12><![CDATA[Радужный ЖК]]></undefined12>
+		<undefined13><![CDATA[1]]></undefined13>
+		<undefined14><![CDATA[29]]></undefined14>
+		<productattributes><![CDATA[a:7:{s:15:"pa_rooms_number";a:6:{s:4:"name";s:15:"pa_rooms_number";s:5:"value";s:0:"";s:8:"position";i:0;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:18:"pa_apartment_floor";a:6:{s:4:"name";s:18:"pa_apartment_floor";s:5:"value";s:0:"";s:8:"position";i:1;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:17:"pa_building_floor";a:6:{s:4:"name";s:17:"pa_building_floor";s:5:"value";s:0:"";s:8:"position";i:2;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_district";a:6:{s:4:"name";s:11:"pa_district";s:5:"value";s:0:"";s:8:"position";i:3;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_square";a:6:{s:4:"name";s:9:"pa_square";s:5:"value";s:0:"";s:8:"position";i:4;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:21:"pa_residental_complex";a:6:{s:4:"name";s:21:"pa_residental_complex";s:5:"value";s:0:"";s:8:"position";i:5;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:21:"pa_building_condition";a:6:{s:4:"name";s:21:"pa_building_condition";s:5:"value";s:0:"";s:8:"position";i:6;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}]]></productattributes>
+	</node>
+	<node>
+		<id><![CDATA[145]]></id>
+		<title><![CDATA[Однокомнатная квартира]]></title>
+		<content><![CDATA[]]></content>
+		<sku><![CDATA[]]></sku>
+		<producttype><![CDATA[simple]]></producttype>
+		<parentproductid><![CDATA[0]]></parentproductid>
+		<undefined6><![CDATA[4]]></undefined6>
+		<undefined7><![CDATA[Сдан]]></undefined7>
+		<undefined8><![CDATA[20]]></undefined8>
+		<undefined9><![CDATA[Киевский]]></undefined9>
+		<undefined10><![CDATA[]]></undefined10>
+		<undefined11><![CDATA[]]></undefined11>
+		<undefined12><![CDATA[Радужный ЖК]]></undefined12>
+		<undefined13><![CDATA[1]]></undefined13>
+		<undefined14><![CDATA[29]]></undefined14>
+		<productattributes><![CDATA[a:7:{s:15:"pa_rooms_number";a:6:{s:4:"name";s:15:"pa_rooms_number";s:5:"value";s:0:"";s:8:"position";i:0;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:18:"pa_apartment_floor";a:6:{s:4:"name";s:18:"pa_apartment_floor";s:5:"value";s:0:"";s:8:"position";i:1;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:17:"pa_building_floor";a:6:{s:4:"name";s:17:"pa_building_floor";s:5:"value";s:0:"";s:8:"position";i:2;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_district";a:6:{s:4:"name";s:11:"pa_district";s:5:"value";s:0:"";s:8:"position";i:3;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_square";a:6:{s:4:"name";s:9:"pa_square";s:5:"value";s:0:"";s:8:"position";i:4;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:21:"pa_residental_complex";a:6:{s:4:"name";s:21:"pa_residental_complex";s:5:"value";s:0:"";s:8:"position";i:5;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:21:"pa_building_condition";a:6:{s:4:"name";s:21:"pa_building_condition";s:5:"value";s:0:"";s:8:"position";i:6;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}]]></productattributes>
+	</node>
+	<node>
+		<id><![CDATA[146]]></id>
+		<title><![CDATA[Однокомнатная квартира]]></title>
+		<content><![CDATA[]]></content>
+		<sku><![CDATA[]]></sku>
+		<producttype><![CDATA[simple]]></producttype>
+		<parentproductid><![CDATA[0]]></parentproductid>
+		<undefined6><![CDATA[4]]></undefined6>
+		<undefined7><![CDATA[Сдан]]></undefined7>
+		<undefined8><![CDATA[20]]></undefined8>
+		<undefined9><![CDATA[Киевский]]></undefined9>
+		<undefined10><![CDATA[]]></undefined10>
+		<undefined11><![CDATA[3700]]></undefined11>
+		<undefined12><![CDATA[Радужный ЖК]]></undefined12>
+		<undefined13><![CDATA[1]]></undefined13>
+		<undefined14><![CDATA[32]]></undefined14>
+		<productattributes><![CDATA[a:8:{s:15:"pa_rooms_number";a:6:{s:4:"name";s:15:"pa_rooms_number";s:5:"value";s:0:"";s:8:"position";i:0;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:18:"pa_apartment_floor";a:6:{s:4:"name";s:18:"pa_apartment_floor";s:5:"value";s:0:"";s:8:"position";i:1;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:17:"pa_building_floor";a:6:{s:4:"name";s:17:"pa_building_floor";s:5:"value";s:0:"";s:8:"position";i:2;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:11:"pa_district";a:6:{s:4:"name";s:11:"pa_district";s:5:"value";s:0:"";s:8:"position";i:3;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:9:"pa_square";a:6:{s:4:"name";s:9:"pa_square";s:5:"value";s:0:"";s:8:"position";i:4;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:21:"pa_residental_complex";a:6:{s:4:"name";s:21:"pa_residental_complex";s:5:"value";s:0:"";s:8:"position";i:5;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:21:"pa_building_condition";a:6:{s:4:"name";s:21:"pa_building_condition";s:5:"value";s:0:"";s:8:"position";i:6;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}s:15:"pa_price_square";a:6:{s:4:"name";s:15:"pa_price_square";s:5:"value";s:0:"";s:8:"position";i:7;s:10:"is_visible";i:1;s:12:"is_variation";i:0;s:11:"is_taxonomy";i:1;}}]]></productattributes>
+	</node>
+</data>

@@ -6,6 +6,42 @@
         $modalWrap = $('.modal-wrap');
 
     $(document).ready(function($) {
+        /*---------Products slider*/
+            $('.slider-items').slick({
+                infinite: false,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                dots: true,
+                nextArrow: '<span class="slider-arrow-right"></span>',
+                prevArrow: '<span class="slider-arrow-left"></span>',
+                  responsive: [
+                {
+                  breakpoint: 1200,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                  }
+                },
+                {
+                  breakpoint: 900,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: false
+                  }
+                },
+                {
+                  breakpoint: 620,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false
+                  }
+                }
+              ]
+            });
 
         /*-----------Show mobile nav menu*/
             $('.hamburger').click(function(event) {
@@ -13,7 +49,7 @@
                 $body.toggleClass('js-nav-menu-active');
             });
         /*------------Show, close modal*/
-        var $modalForm = $('.modal-form'),
+            var $modalForm = $('.modal-form'),
             $form = $modalForm.find('form')[0];
             $(document).on('click', '.js-show-modal', function(event) {
                 event.preventDefault();

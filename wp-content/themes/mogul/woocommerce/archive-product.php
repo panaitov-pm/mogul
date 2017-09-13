@@ -13,12 +13,11 @@ get_header(); ?>
   <div id="primary" class="content-area">
     <main id="main" class="site-main">
       <section class="main-slider">
-        <div class="container">
-          <?php
+        <?php
             $link = get_template_directory_uri();
             $params = array(
                'post_type' => 'product',
-               'posts_per_page' => 5,
+               'posts_per_page' => 10,
                'tax_query' => array(
                     array(
                         'taxonomy' => 'product_cat',
@@ -81,7 +80,6 @@ get_header(); ?>
                   </div>
                 <?php endif; ?>
             </div>
-        </div>
       </section>
     </main><!-- #main -->
   </div><!-- #primary -->

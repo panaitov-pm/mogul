@@ -8,7 +8,7 @@
     $(document).ready(function($) {
         /*---------Products slider*/
             $('.slider-items').slick({
-                infinite: false,
+                infinite: true,
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 dots: true,

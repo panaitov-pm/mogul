@@ -1542,7 +1542,7 @@
     }
     .slider-item {
         margin: 0px 5.5px;
-        padding-bottom: 15px;
+        padding-bottom: 5px;
         border: 1px solid #eeeeee;
         outline: none !important;
         &__img {
@@ -1586,41 +1586,26 @@
             border-bottom: 1px solid #eeeeee;
         }
         &__info-1 {
-            display: flex;
-            align-items: center;
             border-right: 1px solid #eeeeee;
             width: 40%;
             height: 51px;
-            justify-content: center;
-            img {
-                margin-right: 8px;
-            }
-            p {
-                font-size: 16px;
-                color: #7f7f7f;
-            }
         }
         &__info-2 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-                width: 32%;
+            width: 32%;
             border-right: 1px solid #eeeeee;
-            img {
-                margin-right: 8px;
-            }
-            p {
-                font-size: 16px;
-                color: #7f7f7f;
-            }
         }
+        &__info-3 {
+            width: 30%;
+        }
+        &__info-1,
+        &__info-2,
         &__info-3 {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 30%;
             img {
                 margin-right: 8px;
+                margin-left: 0;
             }
             p {
                 font-size: 16px;
@@ -1685,17 +1670,28 @@
         }
     }
     .slider-arrow-left {
-        left: -52px;
-        @include max-width(1590px) {
-            left: 10px;
-        }
+        left: 10px;
     }
     .slider-arrow-right {
-        right: -52px;
+        right: 10px;
         transform: rotateY(180deg);
-        @include max-width(1590px) {
-            right: 10px;
-        }
+    }
+
+    .shop {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .page-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .woosidebar-title {
+        @include font-size($minSize: 20, $maxSize: 24);
+        margin-bottom: 10px;
+    }
+    .woosidebar-widget {
+        margin-bottom: 30px;
     }
 
 

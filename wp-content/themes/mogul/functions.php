@@ -203,3 +203,17 @@ function true_duplicate_post_link( $actions, $post ) {
 }
  
 add_filter( 'post_row_actions', 'true_duplicate_post_link', 10, 2 );
+
+function woosidebar_widgets_init() {
+ 
+    register_sidebar( array(
+        'name'          => 'WooSidebar',
+        'id'            => 'woosidebar-widget',
+        'before_widget' => '<div class="woosidebar-widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<p class="woosidebar-title">',
+        'after_title'   => '</p>',
+    ) );
+ 
+}
+add_action( 'widgets_init', 'woosidebar_widgets_init' );

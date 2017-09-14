@@ -217,3 +217,5 @@ function woosidebar_widgets_init() {
  
 }
 add_action( 'widgets_init', 'woosidebar_widgets_init' );
+
+	

@@ -29,11 +29,10 @@ get_header(); ?>
 					endwhile; // End of the loop.
 					?>
 				</div>
-
+				<div class="col-sm-4 col-lg-2 col-lg-offset-1">
+					<?php get_sidebar(); ?>
+				</div>
 			</div>
-		</div>
-		<div class="col-sm-4 col-lg-2 col-lg-offset-1">
-			<?php get_sidebar(); ?>
 		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -41,7 +41,7 @@ class DUP_Util
     public static $PHP7_plus;
 
     /**
-     *  Inited on load (see end of file)
+     *  Initialized on load (see end of file)
      */
     public static function init()
     {
@@ -552,7 +552,7 @@ class DUP_Util
 	 * Returns a GUIDv4 string
 	 *
 	 * Uses the best cryptographically secure method
-	 * for all supported pltforms with fallback to an older,
+	 * for all supported platforms with fallback to an older,
 	 * less secure version.
 	 *
 	 * @param bool $trim	Trim '}{' curly
@@ -605,6 +605,56 @@ class DUP_Util
 
 		return $guidv4;
 	}
+
+	/**
+     * Returns an array of the WordPress core tables.
+     *
+     * @return array  Returns all WP core tables
+     */
+    public static function getWPCoreTables()
+    {
+		global $wpdb;
+		return array(
+			"{$wpdb->prefix}commentmeta",
+			"{$wpdb->prefix}comments",
+			"{$wpdb->prefix}links",
+			"{$wpdb->prefix}options",
+			"{$wpdb->prefix}postmeta",
+			"{$wpdb->prefix}posts",
+			"{$wpdb->prefix}term_relationships",
+			"{$wpdb->prefix}term_taxonomy",
+			"{$wpdb->prefix}termmeta",
+			"{$wpdb->prefix}terms",
+			"{$wpdb->prefix}usermeta",
+			"{$wpdb->prefix}users");
+    }
+	
+	/**
+     * Runs esc_html and sanitize_textarea_field on a string
+	 *
+	 * @param string   The string to process
+     *
+     * @return string  Returns and escaped and sanitized string
+     */
+    public static function escSanitizeTextAreaField($string)
+    {
+		if (!function_exists('sanitize_textarea_field')) {
+			return esc_html(sanitize_text_field($string));
+		} else {
+			return esc_html(sanitize_textarea_field($string));
+		}	
+    }
+
+	/**
+     * Runs esc_html and sanitize_text_field on a string
+	 *
+	 * @param string   The string to process
+     *
+     * @return string  Returns and escaped and sanitized string
+     */
+    public static function escSanitizeTextField($string)
+    {
+		return esc_html(sanitize_text_field($string));
+    }
 }
 DUP_Util::init();
-?>

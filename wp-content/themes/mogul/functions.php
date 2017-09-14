@@ -7,12 +7,6 @@
  * @package Mogul
  */
 
-add_action('wp_head', 'show_template');
-function show_template() {
-    global $template;
-    echo basename($template);
-}
-
 	/** Various clean up functions */
 	require_once( 'library/cleanup.php' );
 

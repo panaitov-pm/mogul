@@ -373,7 +373,7 @@ body.js-modal-open {
 
 .head-top__btn {
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 0;
 }
 
@@ -754,6 +754,7 @@ body.js-modal-open {
 }
 
 .contact-form__btn--leave {
+  right: 15px;
   top: 196px;
   max-width: 178px;
 }

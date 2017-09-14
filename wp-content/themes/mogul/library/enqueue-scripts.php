@@ -17,7 +17,7 @@ if ( ! function_exists( 'mogul_scripts' ) ) :
 
 	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/app/css/normalize.css', array(), '4.4.1', 'all' );
 
-	wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/app/css/style.css', array(), '0.0.1', 'all' );
+	wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/app/css/style.min.css', array(), '0.0.1', 'all' );
 
 	// Deregister the jquery version bundled with WordPress.
 	wp_deregister_script( 'jquery' );
@@ -27,7 +27,7 @@ if ( ! function_exists( 'mogul_scripts' ) ) :
 
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/app/plugins/slick.min.js', array('jquery'), '1.6.0', true );
 
-	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/app/js/main.js', array(), '0.0.1', true );
+	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/app/js/main.min.js', array(), '0.0.1', true );
 
 	wp_localize_script( 'main-script', 'php_path', array(
 			'ajax_url'     => admin_url( 'admin-ajax.php'),
@@ -42,3 +42,4 @@ if ( ! function_exists( 'mogul_scripts' ) ) :
 
 	add_action( 'wp_enqueue_scripts', 'mogul_scripts' );
 endif;
+

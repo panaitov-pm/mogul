@@ -58,7 +58,7 @@
         margin-right: 40px;
         &__btn {
             position: absolute;
-            top: 0;
+            top: 10px;
             left: 0;
         }
     }
@@ -458,6 +458,7 @@
                 }
             }
             &--leave {
+                right: 15px;
                 top: 196px;
                 max-width: 178px;
                 @include max-width(sm) {

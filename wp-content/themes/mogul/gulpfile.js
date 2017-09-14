@@ -49,6 +49,14 @@
             .pipe(browserSync.reload({stream: true}));
     });
 
+    //Minify css
+     gulp.task('m-css', function() {
+        return gulp.src([paths.css + '/style.css'])
+            .pipe(minifyCSS())
+            .pipe(rename('style.min.css'))
+            .pipe(gulp.dest(paths.css + '/min/'));
+    });
+
     // Useref
     gulp.task('useref', function() {
         return gulp.src('app/*.html')
@@ -81,6 +89,21 @@
         .pipe(browserSync.reload({stream: true}));
     });
 
+    // minify Scripts
+    gulp.task('m-js', function() {  
+        return gulp.src([paths.js + '/main.js'])
+        .pipe(stripDebug())
+        .pipe(stripComments())
+        .pipe(uglify())
+        .pipe(rename('main.min.js'))
+        .pipe(gulp.dest(paths.js + '/min/'));
+    });
+
+    gulp.task('main-script', function() {  
+        return gulp.src([paths.js + '/**/*.js'])
+        .pipe(browserSync.reload({stream: true}));
+    });
+
     //Fonts
     gulp.task('fonts', function() {
         return gulp.src(paths.fonts + '/**/*')
@@ -88,8 +111,11 @@
     });
 
     //Clean 'dist' before build
-    gulp.task('clean', function() {
-        return del(paths.production, {force: true});
+    gulp.task('clean-js', function() {
+        return del(paths.js+'/min/', {force: true});
+    });
+    gulp.task('clean-css', function() {
+        return del(paths.css+'/min/', {force: true});
     });
 
     // Clean cache for task Images
@@ -140,7 +166,7 @@
 
     // Build
     gulp.task('build', function (callback) {
-        runSequence('clean', 'clear', 'favicon', 'img', 'useref', 'scripts', 'fonts', callback);
+        runSequence('clean-js', 'clean-css', 'm-css', 'm-js', callback);
     });
 
     gulp.task('watch', ['sass', 'main-script', 'browser-sync'], function() {

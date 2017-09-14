@@ -1,6 +1,6 @@
 <?php 
 $postID = $_POST['postId'];
-require_once( $_SERVER['DOCUMENT_ROOT'] . '/mogul/wp-load.php' );?>
+  require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );?>
 <?php 
 $args = array(
   'post_type' => 'brands',

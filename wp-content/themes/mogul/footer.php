@@ -55,7 +55,7 @@
 									$link = get_sub_field('social_link'); ?>
 									<li>
 										<?php if( $icon ): ?>
-											<a href="<?php the_sub_field('social_icon'); ?>">
+											<a href="<?php echo $link; ?>">
 												<img src="<?php echo $icon; ?>" alt="<?php echo $link; ?>" />
 											</a>
 										<?php endif; ?>

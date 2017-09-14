@@ -13,6 +13,7 @@
 get_header(); ?>
   <div id="primary" class="content-area">
     <main id="main" class="site-main services">
+      <p class="field-desc"><?php the_field('description'); ?> </p>
       <?php
         $field = "undefined";
         $page_ID = "undefined";
@@ -24,9 +25,9 @@ get_header(); ?>
         }
         $get_field = get_post_meta( (int)$page_ID, $field, true );
         if ($get_field) {
-          echo '<h2>'.$get_field.'</h2>';
+          echo '<h2 class="field-title">'.$get_field.'</h2>';
         } else {
-          echo 'No results found';
+          echo '<p class="field-desc"> No results found</p>';
         }
         
         

@@ -110,8 +110,16 @@ a:hover {
   z-index: 1;
 }
 
-html #wpadminbar {
-  height: 35px;
+.field-desc {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.field-title {
+  margin-bottom: 30px;
 }
 
 /* Responsive font-size*/
@@ -747,7 +755,6 @@ body.js-modal-open {
 
 .contact-form__btn--leave {
   top: 196px;
-  right: 15px;
   max-width: 178px;
 }
 
@@ -2654,6 +2661,10 @@ div.wpcf7-response-output {
   .contact-form__btn--appointment {
     right: auto;
     left: 15px;
+  }
+
+  .contact-form__btn--leave {
+    right: 15px;
   }
 
   .contact-form__btn--appointment,

@@ -14,32 +14,24 @@ function ajax_show_categoty_posts() {
   $pageID = ! empty( $_POST['page_id'] ) ? esc_attr( $_POST['page_id'] ) : false ;
   
   $catID = ! empty( $_POST['cat_id'] ) ? esc_attr( $_POST['cat_id'] ) : false ;
-
-  $slug = $link ? wp_basename( $link ) : false;
-
-  $cat = get_category_by_slug( $slug );
-  
-
-  if ( ! $cat ) {
-    die('Category not found');
-  }
-
+ 
   query_posts( array(
     'posts_per_page'=> get_option( 'posts_per_page' ),
     'post_status' => 'publish',
-    'category_name' => $cat -> slug
+    'cat' => $catID
   ) );?>
 
   <?php if ($pageID == 13 ):?>
     <?php if (have_posts() ):?>
       <?php while ( have_posts() ) : the_post(); ?>
         <div class="portfolio_content__item">
-          <a class="portfolio_content__link js-show-modal" href="<?php the_post_thumbnail_url(); ?>"><?php the_post_thumbnail(); ?></a>
+          <a class="portfolio_content__link js-show-modal <?php echo $post->ID ?>" href="<?php the_post_thumbnail_url(); ?>"><?php the_post_thumbnail(); ?></a>
         </div>
         <!-- /.portfolio_content__item -->
-      <?php endwhile; wp_reset_postdata()?>
+      <?php endwhile; wp_reset_query()?>
   <?php endif;?>
   <?php endif;?>
+
   <?php if ($pageID == 11 ):?>
     <div class="services_content__item">
       <?php $arg_posts =  array(
@@ -53,7 +45,7 @@ function ajax_show_categoty_posts() {
       $query = new WP_Query($arg_posts);?>
       <?php if ($query->have_posts() ):?>
           <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-              <div class="service">
+              <div class="service <?php echo $post->ID ?> ">
                 <?php if(get_field('service_name')): ?>
                   <p class="service__name"><?php the_field('service_name') ?></p>
                 <?php endif; ?>
@@ -125,14 +117,6 @@ function ajax_show_categoty_posts() {
     <!-- /.services_content__item -->
   <?php endif;?>
   <?php 
-  $pagination = get_the_posts_pagination( array(
-        'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen' ) . '</span>',
-        'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
-        'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen' ) . ' </span>',
-      ) );
-
-      echo str_replace( admin_url( 'admin-ajax.php/' ), get_category_link( $cat -> term_id ), $pagination );
-
    wp_die();
 }
 
@@ -151,7 +135,6 @@ function more_posts_callback() {
         <?php get_template_part( 'template-parts/review', 'loading' ); ?>
       <?php endwhile; ?>
   <?php endif; ?>
-
 <?php  
   wp_reset_query();
   wp_die();

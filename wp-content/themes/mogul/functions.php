@@ -93,13 +93,6 @@ add_filter('document_title_parts', function($title){
 });
 
 /*--------------ADD CUSTOM FUNCTIONS--------------------*/
-/*function getPostId() {
-	$id = "hello";
-	wp_die();
-}
-add_action( 'wp_ajax_postID', 'getPostId' );
-add_action( 'wp_ajax_nopriv_postID', 'getPostId' );*/
-
 
 /*
  * Функция создает дубликат поста в виде черновика и редиректит на его страницу редактирования
@@ -218,4 +211,3 @@ function woosidebar_widgets_init() {
 }
 add_action( 'widgets_init', 'woosidebar_widgets_init' );
 
-	

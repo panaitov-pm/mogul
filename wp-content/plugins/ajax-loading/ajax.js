@@ -8,9 +8,10 @@
            event.preventDefault();
            var $this = $(this),
                 titleCat = $this.text(),
-                linkCat = $this.attr('href'),
                 pageID = $this.data('page_id'),
                 catID = $this.data('cat_id');
+
+          linkCat = $this.attr('href');
                 
           if (pageID) {
             pageID = pageID;
@@ -38,8 +39,8 @@
           var container = $('.reviews__inner');
           if ( container.length ) {
             var data = {
-                action:   'more_posts',
-                offset:   container.find('.review').length
+                action: 'more_posts',
+                offset: container.find('.review').length
             };
             $.ajax({
               url: params.ajax_url,
@@ -66,6 +67,7 @@
           }
         });
   }); //end ready
+
   
   function ajaxCat (linkCat, pageID, catID) {
     $mainBox.animate({opacity: 0.3}, 300);

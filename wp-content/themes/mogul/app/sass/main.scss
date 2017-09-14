@@ -459,8 +459,10 @@
             }
             &--leave {
                 top: 196px;
-                right: 15px;
                 max-width: 178px;
+                @include max-width(sm) {
+                    right: 15px;
+                }
                 .leave-review {
                     width: 100%;
                     max-width: none;

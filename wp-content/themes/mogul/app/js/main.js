@@ -113,11 +113,9 @@
             $(document).on('click', '.main-form__btn', function() {
                 $siteMain.find('.field-subject').val(subjectTitle);
             });
-        /*------------Set main form subject to input value*/
+        /*------------Set main form title*/
             $(document).on('click', '.contact-form__btn a', function() {
                 var title = $(this).find('img').attr('alt');
-                console.log(title);
-
                 $modalWrap.find('.main-form__title').text(title);
             });
     }); // end ready
